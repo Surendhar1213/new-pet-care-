@@ -1,0 +1,1006 @@
+/* ========== SERVICE SECTION ========== */
+.service-section {
+  position: relative;
+  padding: 60px 0 80px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e1f5fe 50%, #fff8e1 100%);
+  overflow: hidden;
+}
+
+/* ===================================
+   ANIMATED PAW PRINTS BACKGROUND
+   ================================== */
+
+.paw-prints-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.paw-print {
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.08;
+  animation: floatPaw 20s infinite ease-in-out;
+}
+
+.paw-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.paw-2 {
+  top: 25%;
+  right: 8%;
+  animation-delay: 3s;
+  animation-duration: 22s;
+}
+
+.paw-3 {
+  top: 50%;
+  left: 12%;
+  animation-delay: 6s;
+  animation-duration: 20s;
+}
+
+.paw-4 {
+  top: 70%;
+  right: 15%;
+  animation-delay: 9s;
+  animation-duration: 19s;
+}
+
+.paw-5 {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 12s;
+  animation-duration: 21s;
+}
+
+.paw-6 {
+  top: 40%;
+  right: 25%;
+  animation-delay: 15s;
+  animation-duration: 23s;
+}
+
+@keyframes floatPaw {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 10px) rotate(270deg) scale(1.05);
+  }
+}
+
+/* ===================================
+   RUNNING DOG ANIMATION 🐕💨
+   ================================== */
+
+.running-dog {
+  position: absolute;
+  bottom: 20%;
+  font-size: 50px;
+  z-index: 1;
+  animation: dogRun 15s linear infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes dogRun {
+  0% {
+    left: -80px;
+    transform: scaleX(1) translateY(0);
+  }
+  45% {
+    transform: scaleX(1) translateY(-15px);
+  }
+  50% {
+    left: 50%;
+    transform: scaleX(1) translateY(0);
+  }
+  55% {
+    transform: scaleX(1) translateY(-15px);
+  }
+  100% {
+    left: calc(100% + 80px);
+    transform: scaleX(1) translateY(0);
+  }
+}
+
+/* ===================================
+   FOOD BOWL ANIMATION 🍖
+   ================================== */
+
+.food-bowl {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  font-size: 45px;
+  z-index: 1;
+  animation: foodBounce 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes foodBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) rotate(-5deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) rotate(5deg) scale(1);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-3deg) scale(1.05);
+  }
+}
+
+/* ===================================
+   FLOATING DOG BONE ANIMATION 🦴
+   ================================== */
+
+.dog-bone {
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  font-size: 40px;
+  z-index: 1;
+  animation: boneFloat 4s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+@keyframes boneFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+/* ===================================
+   HEART BEAT ANIMATION ❤️
+   ================================== */
+
+.heart-beat {
+  position: absolute;
+  bottom: 30%;
+  right: 15%;
+  font-size: 35px;
+  z-index: 1;
+  animation: heartBeat 2s ease-in-out infinite;
+  color: #ff6b9d;
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.3);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
+}
+
+/* Left Circle Shape - Like Screenshot */
+.service-shape-left {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.circle-shape {
+  width: 100%;
+  height: 100%;
+  animation: rotateShape 20s linear infinite;
+}
+
+@keyframes rotateShape {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===================================
+   SECTION HEADER - NEW CONTENT
+   ================================== */
+
+.service-header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Title - Our Services (H1) */
+.service-main-title {
+  font-size: 56px;
+  font-weight: 800;
+  color: #2a6449;
+  margin: 0 0 15px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  animation: titleFadeIn 1s ease-out;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-main-title::after {
+  content: '🐾';
+  position: absolute;
+  right: -50px;
+  top: -10px;
+  font-size: 30px;
+  opacity: 0.6;
+  animation: pawBounce 2s ease-in-out infinite;
+}
+
+@keyframes pawBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Subtitle - H3 Tag */
+.service-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2a6449;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  font-style: italic;
+  animation: subtitleFadeIn 1.2s ease-out;
+}
+
+@keyframes subtitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Description Paragraph */
+.service-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #546e7a;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
+  animation: descFadeIn 1.4s ease-out;
+}
+
+@keyframes descFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Right Shape */
+.service-shape-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.service-shape-right img {
+  width: 100%;
+  height: auto;
+}
+
+/* Container */
+.service-section .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========== NAVIGATION BUTTONS (LEFT SIDE) ========== */
+.service-nav-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.service-nav-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #2a6449;
+  background: linear-gradient(135deg, #2a6449 0%, #2a6449 100%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(42, 100, 73, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.service-nav-btn:hover::before {
+  width: 120%;
+  height: 120%;
+}
+
+.service-nav-btn:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 8px 25px rgba(42, 100, 73, 0.5);
+  border-color: #2a6449;
+}
+
+.service-nav-btn:active {
+  transform: scale(0.95);
+}
+
+.service-nav-btn svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.service-nav-btn:hover svg {
+  transform: scale(1.2);
+}
+
+/* ========== SLIDER ========== */
+.service-slider-wrapper {
+  overflow: visible;
+}
+
+.service-swiper {
+  overflow: visible !important;
+  padding: 10px 0 20px;
+}
+
+.service-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.service-swiper .swiper-slide {
+  height: auto;
+}
+
+/* ========== SERVICE CARD ========== */
+.service-card {
+  height: 100%;
+}
+
+.service-card-inner {
+  position: relative;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.service-card-inner:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Card Image */
+.service-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.service-card-inner:hover .service-img {
+  transform: scale(1.05);
+}
+
+/* Gradient Overlay */
+.service-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  z-index: 1;
+  clip-path: ellipse(85% 100% at 50% 100%);
+  background: linear-gradient(
+    to top,
+    rgba(25, 35, 55, 0.95) 0%,
+    rgba(25, 35, 55, 0.85) 30%,
+    rgba(25, 35, 55, 0.5) 60%,
+    transparent 100%
+  );
+}
+
+.service-card-inner:hover .service-overlay {
+  height: 75%;
+}
+
+/* Card Content */
+.service-content {
+  position: absolute;
+  bottom: 28px;
+  left: 22px;
+  right: 70px;
+  z-index: 2;
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.service-card-inner:hover .service-title {
+  color: #2a6449;
+}
+
+.service-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Arrow Button */
+.service-arrow {
+  position: absolute;
+  bottom: 28px;
+  right: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-arrow:hover {
+  background: #2a6449;
+  border-color: #2a6449;
+  transform: rotate(0deg) scale(1.1);
+}
+
+.service-arrow svg {
+  transition: transform 0.3s ease;
+}
+
+.service-arrow:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ========== BOTTOM LINK ========== */
+.service-bottom {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a6449;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border: 2px solid #2a6449;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(42, 100, 73, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2a6449 0%, #2a6449 100%);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.service-link:hover::before {
+  left: 0;
+}
+
+.service-link:hover {
+  color: #ffffff;
+  border-color: #2a6449;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(42, 100, 73, 0.4);
+}
+
+.link-arrow {
+  transition: transform 0.3s;
+}
+
+.service-link:hover .link-arrow {
+  transform: translateX(5px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1199px) {
+  .service-card-inner {
+    height: 380px;
+  }
+  
+  .service-title {
+    font-size: 20px;
+  }
+  
+  .service-main-title {
+    font-size: 48px;
+  }
+  
+  .service-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .service-section {
+    padding: 50px 0 70px;
+  }
+  
+  .service-card-inner {
+    height: 360px;
+  }
+  
+  .service-shape-left {
+    width: 200px;
+    height: 200px;
+    left: -80px;
+  }
+  
+  .service-main-title {
+    font-size: 42px;
+  }
+  
+  .service-main-title::after {
+    right: -35px;
+    font-size: 25px;
+  }
+  
+  .service-subtitle {
+    font-size: 18px;
+  }
+  
+  .service-description {
+    font-size: 15px;
+  }
+  
+  .running-dog {
+    font-size: 40px;
+  }
+  
+  .food-bowl {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-section {
+    padding: 40px 0 60px;
+  }
+  
+  .service-nav-wrapper {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .service-nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .service-card-inner {
+    height: 380px;
+  }
+  
+  .service-shape-left {
+    display: none;
+  }
+  
+  .service-header {
+    margin-bottom: 40px;
+  }
+  
+  .service-main-title {
+    font-size: 36px;
+  }
+  
+  .service-main-title::after {
+    display: none;
+  }
+  
+  .service-subtitle {
+    font-size: 16px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  .running-dog {
+    font-size: 35px;
+    bottom: 10%;
+  }
+  
+  .food-bowl {
+    font-size: 30px;
+    top: 10%;
+  }
+  
+  .dog-bone {
+    display: none;
+  }
+  
+  .heart-beat {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .service-card-inner {
+    height: 350px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+  }
+  
+  .service-text {
+    font-size: 13px;
+  }
+  
+  .service-content {
+    bottom: 22px;
+    left: 18px;
+    right: 60px;
+  }
+  
+  .service-arrow {
+    width: 40px;
+    height: 40px;
+    right: 18px;
+    bottom: 22px;
+  }
+  
+  .service-bottom {
+    margin-top: 35px;
+  }
+  
+  .service-main-title {
+    font-size: 32px;
+  }
+  
+  .service-subtitle {
+    font-size: 15px;
+  }
+  
+  .service-link {
+    font-size: 14px;
+    padding: 14px 28px;
+  }
+  
+  .service-shape-right {
+    display: none;
+  }
+  
+  .running-dog {
+    font-size: 30px;
+  }
+  
+  .food-bowl {
+    font-size: 25px;
+  }
+}
+
+/* ========== ADDITIONAL DOG & CAT ANIMATIONS FROM SHAPE FOLDER ========== */
+.service-dog-cat-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Dog & Cat Shape Animations */
+.service-dog-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.service-dog-shape img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(45%) saturate(1200%) hue-rotate(120deg) brightness(0.85) contrast(0.9);
+  opacity: 0.6;
+}
+
+.service-dog-1 {
+  top: 20%;
+  left: 2%;
+  animation: servicePetFloat1 12s ease-in-out infinite;
+}
+
+.service-dog-2 {
+  top: 65%;
+  right: 3%;
+  animation: servicePetFloat2 14s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.service-dog-3 {
+  bottom: 25%;
+  left: 5%;
+  animation: servicePetFloat3 13s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.service-dog-4 {
+  top: 40%;
+  right: 8%;
+  animation: servicePetFloat4 15s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Floating Shape Animations */
+.service-floating-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.service-floating-shape img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(45%) saturate(1200%) hue-rotate(120deg) brightness(0.85) contrast(0.9);
+  opacity: 0.5;
+}
+
+.service-float-1 {
+  top: 15%;
+  right: 10%;
+  animation: serviceShapeFloat1 18s ease-in-out infinite;
+}
+
+.service-float-2 {
+  bottom: 20%;
+  left: 8%;
+  animation: serviceShapeFloat2 20s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.service-float-3 {
+  top: 55%;
+  right: 15%;
+  animation: serviceShapeFloat3 16s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+/* Pet Float Animations */
+@keyframes servicePetFloat1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-25px) translateX(20px) rotate(3deg);
+  }
+}
+
+@keyframes servicePetFloat2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-25px) translateX(-15px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) translateX(10px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-20px) rotate(-3deg);
+  }
+}
+
+@keyframes servicePetFloat3 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-18px) translateX(12px) rotate(4deg);
+  }
+  50% {
+    transform: translateY(-12px) translateX(-8px) rotate(-4deg);
+  }
+  75% {
+    transform: translateY(-22px) translateX(18px) rotate(2deg);
+  }
+}
+
+@keyframes servicePetFloat4 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-22px) translateX(-12px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-14px) translateX(14px) rotate(4deg);
+  }
+  75% {
+    transform: translateY(-28px) translateX(-18px) rotate(-2deg);
+  }
+}
+
+/* Shape Float Animations */
+@keyframes serviceShapeFloat1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(25px, -25px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-15px, 15px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(30px, 8px) rotate(270deg) scale(1.05);
+  }
+}
+
+@keyframes serviceShapeFloat2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-20px, -30px) rotate(-90deg) scale(1.15);
+  }
+  50% {
+    transform: translate(18px, 20px) rotate(-180deg) scale(0.85);
+  }
+  75% {
+    transform: translate(-25px, 12px) rotate(-270deg) scale(1.08);
+  }
+}
+
+@keyframes serviceShapeFloat3 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(22px, -22px) rotate(85deg) scale(1.12);
+  }
+  50% {
+    transform: translate(-18px, 18px) rotate(175deg) scale(0.88);
+  }
+  75% {
+    transform: translate(28px, 10px) rotate(265deg) scale(1.06);
+  }
+}
+
+/* Responsive adjustments for additional animations */
+@media (max-width: 991px) {
+  .service-dog-shape img {
+    width: 80px;
+  }
+  
+  .service-floating-shape img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-dog-shape img {
+    width: 70px;
+  }
+  
+  .service-floating-shape img {
+    width: 45px;
+  }
+  
+  .service-dog-3,
+  .service-dog-4,
+  .service-float-2,
+  .service-float-3 {
+    display: none;
+  }
+}

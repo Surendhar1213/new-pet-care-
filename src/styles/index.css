@@ -1,0 +1,6 @@
+/* Import all CSS files from the template */
+@import '/assets/css/app.min.css';
+@import '/assets/css/fontawesome.min.css';
+@import '/assets/css/style.css';
+@import './custom.css';
+
