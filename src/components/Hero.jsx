@@ -9,20 +9,11 @@ const Hero = () => {
   const swiperRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
-  // Helper function to get correct image path for all devices and networks
+  // Simple path helper - works for both dev and production (Netlify)
   const getImagePath = (path) => {
+    // For Netlify and most deployments, simple relative paths work
     // Ensure path starts with /
-    const cleanPath = path.startsWith('/') ? path : `/${path}`;
-    
-    // Always use absolute URL to ensure it works on all devices and networks
-    // This ensures images load when accessing from mobile/other laptops on the same network
-    if (typeof window !== 'undefined') {
-      const origin = window.location.origin;
-      return `${origin}${cleanPath}`;
-    }
-    
-    // Fallback - use relative path during SSR or initial render
-    return cleanPath;
+    return path.startsWith('/') ? path : `/${path}`;
   };
 
   const heroSlides = [
@@ -43,6 +34,11 @@ const Hero = () => {
   // Initialize slider properly
   useEffect(() => {
     setIsReady(true);
+    
+    // Debug: Log image paths in development
+    if (import.meta.env.DEV) {
+      console.log('Hero image paths:', heroSlides.map(s => s.bg));
+    }
     
     // Handle browser back/forward navigation
     const handlePageShow = (e) => {
@@ -114,12 +110,18 @@ const Hero = () => {
                 className="hero-bg-img"
                 loading={index === 0 ? "eager" : "lazy"}
                 onLoad={() => {
-                  console.log('Image loaded successfully:', slide.bg);
+                  if (import.meta.env.DEV) {
+                    console.log('Image loaded successfully:', slide.bg);
+                  }
                 }}
                 onError={(e) => {
-                  console.error('Image failed to load:', slide.bg);
+                  console.error('❌ Image failed to load:', slide.bg);
                   console.error('Attempted full path:', e.target.src);
+                  console.error('Current location:', window.location.href);
+                  console.error('BASE_URL:', import.meta.env.BASE_URL);
+                  // Fallback gradient background
                   e.target.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                  e.target.style.display = 'block';
                 }}
               />
               <div className="hero-overlay"></div>
