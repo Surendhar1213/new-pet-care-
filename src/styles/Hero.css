@@ -31,8 +31,22 @@
   opacity: 1 !important;
 }
 
+/* Ensure slide container is visible when active */
+.hero-slider .swiper-slide-active .th-hero-slide {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 /* Ensure images are always visible when slide is active */
 .hero-slider .swiper-slide-active .hero-bg-img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  z-index: 0 !important;
+}
+
+/* Also ensure images in active slide container are visible */
+.hero-slider .swiper-slide-active img {
   opacity: 1 !important;
   visibility: visible !important;
   display: block !important;
@@ -60,6 +74,16 @@
   opacity: 1 !important;
   visibility: visible !important;
   display: block !important;
+}
+
+/* Force visibility for all hero images in active slides */
+.hero-slider .swiper-slide-active .th-hero-slide .hero-bg-img,
+.hero-slider .swiper-slide-active img.hero-bg-img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  position: absolute !important;
+  z-index: 0 !important;
 }
 
 /* ========== OVERLAY ========== */

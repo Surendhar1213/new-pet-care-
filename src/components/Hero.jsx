@@ -40,6 +40,24 @@ const Hero = () => {
       console.log('Hero image paths:', heroSlides.map(s => s.bg));
     }
     
+    // Force images to be visible after Swiper initializes
+    const ensureImagesVisible = () => {
+      setTimeout(() => {
+        const activeSlide = document.querySelector('.hero-slider .swiper-slide-active');
+        if (activeSlide) {
+          const images = activeSlide.querySelectorAll('.hero-bg-img');
+          images.forEach(img => {
+            img.style.opacity = '1';
+            img.style.visibility = 'visible';
+            img.style.display = 'block';
+          });
+        }
+      }, 200);
+    };
+
+    // Run after a short delay to ensure Swiper is initialized
+    ensureImagesVisible();
+    
     // Handle browser back/forward navigation
     const handlePageShow = (e) => {
       if (e.persisted) {
@@ -47,6 +65,7 @@ const Hero = () => {
           if (swiperRef.current?.swiper) {
             swiperRef.current.swiper.autoplay.start();
           }
+          ensureImagesVisible();
         }, 100);
       }
     };
@@ -92,11 +111,33 @@ const Hero = () => {
           if (swiper.autoplay) {
             swiper.autoplay.start();
           }
+          // Ensure images are visible when slide changes
+          setTimeout(() => {
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            if (activeSlide) {
+              const images = activeSlide.querySelectorAll('.hero-bg-img');
+              images.forEach(img => {
+                img.style.opacity = '1';
+                img.style.visibility = 'visible';
+                img.style.display = 'block';
+              });
+            }
+          }, 50);
         }}
         onSwiper={(swiper) => {
           setTimeout(() => {
             if (swiper && swiper.autoplay) {
               swiper.autoplay.start();
+            }
+            // Ensure images are visible after Swiper initializes
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            if (activeSlide) {
+              const images = activeSlide.querySelectorAll('.hero-bg-img');
+              images.forEach(img => {
+                img.style.opacity = '1';
+                img.style.visibility = 'visible';
+                img.style.display = 'block';
+              });
             }
           }, 100);
         }}
