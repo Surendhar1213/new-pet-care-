@@ -109,9 +109,29 @@ const Hero = () => {
                 alt={slide.title}
                 className="hero-bg-img"
                 loading={index === 0 ? "eager" : "lazy"}
+                style={{
+                  opacity: 1,
+                  visibility: 'visible',
+                  display: 'block',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  zIndex: 0
+                }}
                 onLoad={() => {
                   if (import.meta.env.DEV) {
-                    console.log('Image loaded successfully:', slide.bg);
+                    console.log('✅ Image loaded successfully:', slide.bg);
+                  }
+                  // Ensure image is visible after load
+                  const img = document.querySelector(`img[src="${slide.bg}"]`);
+                  if (img) {
+                    img.style.opacity = '1';
+                    img.style.visibility = 'visible';
+                    img.style.display = 'block';
                   }
                 }}
                 onError={(e) => {
@@ -122,6 +142,8 @@ const Hero = () => {
                   // Fallback gradient background
                   e.target.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
                   e.target.style.display = 'block';
+                  e.target.style.opacity = '1';
+                  e.target.style.visibility = 'visible';
                 }}
               />
               <div className="hero-overlay"></div>

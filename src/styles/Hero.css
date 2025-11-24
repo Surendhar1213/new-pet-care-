@@ -31,6 +31,13 @@
   opacity: 1 !important;
 }
 
+/* Ensure images are always visible when slide is active */
+.hero-slider .swiper-slide-active .hero-bg-img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
 /* ========== SLIDE CONTAINER ========== */
 .th-hero-slide {
   position: relative;
@@ -50,6 +57,9 @@
   object-position: center;
   z-index: 0;
   border-radius: 50px; /* Added to ensure images also have rounded corners */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
 }
 
 /* ========== OVERLAY ========== */
