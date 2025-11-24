@@ -9,17 +9,33 @@ const Hero = () => {
   const swiperRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
+  // Helper function to get correct image path for all devices and networks
+  const getImagePath = (path) => {
+    // Ensure path starts with /
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    
+    // Always use absolute URL to ensure it works on all devices and networks
+    // This ensures images load when accessing from mobile/other laptops on the same network
+    if (typeof window !== 'undefined') {
+      const origin = window.location.origin;
+      return `${origin}${cleanPath}`;
+    }
+    
+    // Fallback - use relative path during SSR or initial render
+    return cleanPath;
+  };
+
   const heroSlides = [
     {
-      bg: '/assets/img/hero2.jpg',
+      bg: getImagePath('/assets/img/hero2.jpg'),
       title: 'Reliable Dog Walking & Daily Exercise'
     },
     {
-      bg: '/assets/img/hero4.jpg',
+      bg: getImagePath('/assets/img/hero4.jpg'),
       title: 'Safe House Sitting With Full-Time Care'
     },
     {
-      bg: '/assets/img/hero3.jpg',
+      bg: getImagePath('/assets/img/hero3.jpg'),
       title: 'Drop-In Visits & Fun Doggy Day Care'
     },
   ];
@@ -97,8 +113,12 @@ const Hero = () => {
                 alt={slide.title}
                 className="hero-bg-img"
                 loading={index === 0 ? "eager" : "lazy"}
+                onLoad={() => {
+                  console.log('Image loaded successfully:', slide.bg);
+                }}
                 onError={(e) => {
                   console.error('Image failed to load:', slide.bg);
+                  console.error('Attempted full path:', e.target.src);
                   e.target.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
                 }}
               />
