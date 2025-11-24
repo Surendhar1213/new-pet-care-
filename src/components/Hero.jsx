@@ -9,37 +9,19 @@ const Hero = () => {
   const swiperRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
-  // Simple and reliable path helper - works everywhere
-  const getImagePath = (path) => {
-    // Ensure path starts with /
-    const cleanPath = path.startsWith('/') ? path : `/${path}`;
-    
-    // For Netlify and standard deployments, BASE_URL is '/'
-    // So we can just use the path directly
-    const baseUrl = import.meta.env.BASE_URL || '/';
-    
-    // If baseUrl is root, just return the path
-    if (baseUrl === '/') {
-      return cleanPath;
-    }
-    
-    // Otherwise, combine baseUrl and path (remove leading slash from path)
-    const pathWithoutSlash = cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath;
-    const baseWithoutTrailing = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
-    return `${baseWithoutTrailing}/${pathWithoutSlash}`;
-  };
-
+  // Direct paths - no helper function needed, works everywhere
+  // Public folder assets are served from root in Vite/Netlify
   const heroSlides = [
     {
-      bg: getImagePath('/assets/img/hero2.jpg'),
+      bg: '/assets/img/hero2.jpg',
       title: 'Reliable Dog Walking & Daily Exercise'
     },
     {
-      bg: getImagePath('/assets/img/hero4.jpg'),
+      bg: '/assets/img/hero4.jpg',
       title: 'Safe House Sitting With Full-Time Care'
     },
     {
-      bg: getImagePath('/assets/img/hero3.jpg'),
+      bg: '/assets/img/hero3.jpg',
       title: 'Drop-In Visits & Fun Doggy Day Care'
     },
   ];
@@ -48,10 +30,23 @@ const Hero = () => {
   useEffect(() => {
     setIsReady(true);
     
-    // Debug: Log image paths (both dev and production for debugging)
+    // Debug: Log image paths and verify they're correct
     console.log('Hero image paths:', heroSlides.map(s => s.bg));
     console.log('BASE_URL:', import.meta.env.BASE_URL);
     console.log('Current location:', window.location.href);
+    
+    // Verify images exist by checking if they load
+    heroSlides.forEach((slide, index) => {
+      const img = new Image();
+      img.onload = () => {
+        console.log(`✅ Hero image ${index + 1} verified:`, slide.bg);
+      };
+      img.onerror = () => {
+        console.error(`❌ Hero image ${index + 1} NOT FOUND:`, slide.bg);
+        console.error('Full URL would be:', new URL(slide.bg, window.location.origin).href);
+      };
+      img.src = slide.bg;
+    });
     
     // Force images to be visible after Swiper initializes
     const ensureImagesVisible = () => {
