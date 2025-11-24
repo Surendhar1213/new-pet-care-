@@ -9,11 +9,24 @@ const Hero = () => {
   const swiperRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
-  // Simple path helper - works for both dev and production (Netlify)
+  // Simple and reliable path helper - works everywhere
   const getImagePath = (path) => {
-    // For Netlify and most deployments, simple relative paths work
     // Ensure path starts with /
-    return path.startsWith('/') ? path : `/${path}`;
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    
+    // For Netlify and standard deployments, BASE_URL is '/'
+    // So we can just use the path directly
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    
+    // If baseUrl is root, just return the path
+    if (baseUrl === '/') {
+      return cleanPath;
+    }
+    
+    // Otherwise, combine baseUrl and path (remove leading slash from path)
+    const pathWithoutSlash = cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath;
+    const baseWithoutTrailing = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    return `${baseWithoutTrailing}/${pathWithoutSlash}`;
   };
 
   const heroSlides = [
@@ -35,10 +48,10 @@ const Hero = () => {
   useEffect(() => {
     setIsReady(true);
     
-    // Debug: Log image paths in development
-    if (import.meta.env.DEV) {
-      console.log('Hero image paths:', heroSlides.map(s => s.bg));
-    }
+    // Debug: Log image paths (both dev and production for debugging)
+    console.log('Hero image paths:', heroSlides.map(s => s.bg));
+    console.log('BASE_URL:', import.meta.env.BASE_URL);
+    console.log('Current location:', window.location.href);
     
     // Force images to be visible after Swiper initializes
     const ensureImagesVisible = () => {
@@ -164,9 +177,8 @@ const Hero = () => {
                   zIndex: 0
                 }}
                 onLoad={() => {
-                  if (import.meta.env.DEV) {
-                    console.log('✅ Image loaded successfully:', slide.bg);
-                  }
+                  console.log('✅ Image loaded successfully:', slide.bg);
+                  console.log('Full image URL:', new URL(slide.bg, window.location.origin).href);
                   // Ensure image is visible after load
                   const img = document.querySelector(`img[src="${slide.bg}"]`);
                   if (img) {
@@ -176,15 +188,29 @@ const Hero = () => {
                   }
                 }}
                 onError={(e) => {
+                  const attemptedUrl = e.target.src;
+                  const fullUrl = new URL(slide.bg, window.location.origin).href;
                   console.error('❌ Image failed to load:', slide.bg);
-                  console.error('Attempted full path:', e.target.src);
+                  console.error('Attempted path:', attemptedUrl);
+                  console.error('Expected full URL:', fullUrl);
                   console.error('Current location:', window.location.href);
                   console.error('BASE_URL:', import.meta.env.BASE_URL);
-                  // Fallback gradient background
-                  e.target.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                  e.target.style.display = 'block';
-                  e.target.style.opacity = '1';
-                  e.target.style.visibility = 'visible';
+                  console.error('Image element:', e.target);
+                  
+                  // Try to fix the path and reload
+                  const correctedPath = slide.bg.startsWith('/') ? slide.bg : `/${slide.bg}`;
+                  console.log('Trying corrected path:', correctedPath);
+                  e.target.src = correctedPath;
+                  
+                  // Fallback gradient background if still fails
+                  setTimeout(() => {
+                    if (!e.target.complete || e.target.naturalHeight === 0) {
+                      e.target.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                      e.target.style.display = 'block';
+                      e.target.style.opacity = '1';
+                      e.target.style.visibility = 'visible';
+                    }
+                  }, 1000);
                 }}
               />
               <div className="hero-overlay"></div>
