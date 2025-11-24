@@ -4,52 +4,32 @@
   width: 100%;
   height: 770px;
   overflow: hidden;
-  border-radius: 50px; /* Equal radius on all corners */
+  border-radius: 50px;
   margin-bottom: 0;
 }
 
 /* ========== SWIPER CONTAINER ========== */
 .hero-slider {
   width: 100%;
-  height: 790px;
-  border-radius: 50px; /* Added to match wrapper */
+  height: 770px;
+  border-radius: 50px;
 }
 
 .hero-slider .swiper-wrapper {
   height: 770px;
-  border-radius: 50px; /* Added to match wrapper */
+  border-radius: 50px;
 }
 
 .hero-slider .swiper-slide {
   width: 100%;
   height: 770px;
-  opacity: 0 !important;
-  border-radius: 50px; /* Added to match wrapper */
+  opacity: 0;
+  border-radius: 50px;
+  transition: opacity 1000ms ease;
 }
 
 .hero-slider .swiper-slide-active {
-  opacity: 1 !important;
-}
-
-/* Ensure slide container is visible when active */
-.hero-slider .swiper-slide-active .th-hero-slide {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Ensure images are always visible when slide is active */
-.hero-slider .swiper-slide-active .hero-bg-img {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
-  z-index: 0 !important;
-}
-
-/* Also ensure images in active slide container are visible */
-.hero-slider .swiper-slide-active img {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  opacity: 1;
 }
 
 /* ========== SLIDE CONTAINER ========== */
@@ -57,7 +37,8 @@
   position: relative;
   width: 100%;
   height: 770px;
-  border-radius: 50px; /* Added to match wrapper */
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 /* ========== BACKGROUND IMAGE ========== */
@@ -67,23 +48,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
   z-index: 0;
-  border-radius: 50px; /* Added to ensure images also have rounded corners */
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
-}
-
-/* Force visibility for all hero images in active slides */
-.hero-slider .swiper-slide-active .th-hero-slide .hero-bg-img,
-.hero-slider .swiper-slide-active img.hero-bg-img {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
-  position: absolute !important;
-  z-index: 0 !important;
+  border-radius: 50px;
 }
 
 /* ========== OVERLAY ========== */
@@ -95,7 +61,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.35);
   z-index: 1;
-  border-radius: 50px; /* Added to match wrapper */
+  border-radius: 50px;
 }
 
 /* ========== CONTENT CONTAINER ========== */
@@ -114,7 +80,7 @@
 }
 
 .hero-content-row {
-  align-items: flex-end !important;
+  align-items: flex-end;
 }
 
 .th-container2 {
@@ -131,7 +97,7 @@
   padding-bottom: 0;
 }
 
-/* ========== STATIC TITLE STYLES ========== */
+/* ========== TITLE STYLES ========== */
 .hero-title {
   font-size: clamp(32px, 5.5vw, 68px);
   font-weight: 700;
@@ -172,36 +138,22 @@
   display: inline-flex;
   align-items: center;
   padding: 16px 40px;
-  background: #2a6449 !important;
-  color: #fff !important;
+  background: #2a6449;
+  color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   font-size: 18px;
   transition: all 0.3s ease;
-  border: 2px solid #2a6449 !important;
+  border: 2px solid #2a6449;
 }
 
 .th-btn:hover {
-  background: #1f4a35 !important;
-  color: #fff !important;
+  background: #1f4a35;
+  color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(42, 100, 73, 0.4);
-  border-color: #1f4a35 !important;
-}
-
-.hero-style7 .th-btn,
-.hero-style7 .th-btn-icon2 {
-  background: #2a6449 !important;
-  color: #fff !important;
-  border-color: #2a6449 !important;
-}
-
-.hero-style7 .th-btn:hover,
-.hero-style7 .th-btn-icon2:hover {
-  background: #1f4a35 !important;
-  color: #fff !important;
-  border-color: #1f4a35 !important;
+  border-color: #1f4a35;
 }
 
 .th-btn i {
@@ -257,7 +209,10 @@
   .hero-slider,
   .hero-slider .swiper-wrapper,
   .hero-slider .swiper-slide,
-  .th-hero-slide,
+  .th-hero-slide {
+    height: 650px;
+  }
+  
   .hero-inner {
     height: 40%;
     top: 60%;
@@ -283,12 +238,6 @@
   .hero-slider .swiper-slide,
   .th-hero-slide {
     height: 550px;
-  }
-  
-  .hero-inner {
-    height: 30%;
-    top: 70%;
-    transform: translateY(-100%);
   }
   
   .hero-inner {

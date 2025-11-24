@@ -1,19 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import '../styles/Hero.css';
 
-// Import images from src/assets
+// Import images
 import hero2Img from '../assets/img/hero2.jpg';
 import hero3Img from '../assets/img/hero3.jpg';
 import hero4Img from '../assets/img/hero4.jpg';
 
 const Hero = () => {
   const swiperRef = useRef(null);
-  const [isReady, setIsReady] = useState(false);
-
 
   const heroSlides = [
     {
@@ -30,58 +30,20 @@ const Hero = () => {
     },
   ];
 
-  // Initialize slider properly
+  // Preload first image
   useEffect(() => {
-    setIsReady(true);
-    
-    // Force images to be visible after Swiper initializes
-    const ensureImagesVisible = () => {
-      setTimeout(() => {
-        const activeSlide = document.querySelector('.hero-slider .swiper-slide-active');
-        if (activeSlide) {
-          const images = activeSlide.querySelectorAll('.hero-bg-img');
-          images.forEach(img => {
-            img.style.opacity = '1';
-            img.style.visibility = 'visible';
-            img.style.display = 'block';
-          });
-        }
-      }, 200);
-    };
-
-    // Run after a short delay to ensure Swiper is initialized
-    ensureImagesVisible();
-    
-    // Handle browser back/forward navigation
-    const handlePageShow = (e) => {
-      if (e.persisted) {
-        setTimeout(() => {
-          if (swiperRef.current?.swiper) {
-            swiperRef.current.swiper.autoplay.start();
-          }
-          ensureImagesVisible();
-        }, 100);
-      }
-    };
-
-    window.addEventListener('pageshow', handlePageShow);
-    return () => window.removeEventListener('pageshow', handlePageShow);
+    const img = new Image();
+    img.src = hero2Img;
+    img.onload = () => console.log('First image loaded');
   }, []);
 
-  // Navigation handlers
   const goPrev = () => {
-    if (swiperRef.current?.swiper) {
-      swiperRef.current.swiper.slidePrev();
-    }
+    swiperRef.current?.swiper?.slidePrev();
   };
 
   const goNext = () => {
-    if (swiperRef.current?.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
+    swiperRef.current?.swiper?.slideNext();
   };
-
-  if (!isReady) return null;
 
   return (
     <div className="th-hero-wrapper hero-7" id="hero">
@@ -94,78 +56,30 @@ const Hero = () => {
           delay: 4000,
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
-          waitForTransition: true,
         }}
         loop={true}
         speed={1000}
         slidesPerView={1}
         className="hero-slider"
-        watchSlidesProgress={true}
-        onSlideChange={(swiper) => {
+        onSwiper={(swiper) => {
           if (swiper.autoplay) {
             swiper.autoplay.start();
           }
-          // Ensure images are visible when slide changes
-          setTimeout(() => {
-            const activeSlide = swiper.slides[swiper.activeIndex];
-            if (activeSlide) {
-              const images = activeSlide.querySelectorAll('.hero-bg-img');
-              images.forEach(img => {
-                img.style.opacity = '1';
-                img.style.visibility = 'visible';
-                img.style.display = 'block';
-              });
-            }
-          }, 50);
-        }}
-        onSwiper={(swiper) => {
-          setTimeout(() => {
-            if (swiper && swiper.autoplay) {
-              swiper.autoplay.start();
-            }
-            // Ensure images are visible after Swiper initializes
-            const activeSlide = swiper.slides[swiper.activeIndex];
-            if (activeSlide) {
-              const images = activeSlide.querySelectorAll('.hero-bg-img');
-              images.forEach(img => {
-                img.style.opacity = '1';
-                img.style.visibility = 'visible';
-                img.style.display = 'block';
-              });
-            }
-          }, 100);
         }}
       >
         {heroSlides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="th-hero-slide">
-              <img 
-                src={slide.bg} 
-                alt={slide.title}
+              <div 
                 className="hero-bg-img"
-                loading={index === 0 ? "eager" : "lazy"}
                 style={{
-                  opacity: 1,
-                  visibility: 'visible',
-                  display: 'block',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  objectPosition: 'center',
-                  zIndex: 0
+                  backgroundImage: `url(${slide.bg})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
                 }}
-                onLoad={() => {
-                  // Ensure image is visible after load
-                  const img = document.querySelector(`img[src="${slide.bg}"]`);
-                  if (img) {
-                    img.style.opacity = '1';
-                    img.style.visibility = 'visible';
-                    img.style.display = 'block';
-                  }
-                }}
+                role="img"
+                aria-label={slide.title}
               />
               <div className="hero-overlay"></div>
               <div className="hero-inner">
@@ -175,7 +89,7 @@ const Hero = () => {
                       <div className="hero-style7">
                         <h1 className="hero-title">{slide.title}</h1>
                         <div className="hero-button-wrapper">
-                          <a href="#" className="th-btn th-btn-icon2">
+                          <a href="#contact" className="th-btn th-btn-icon2">
                             Book a Stay <i className="far fa-long-arrow-right ms-3"></i>
                           </a>
                         </div>
