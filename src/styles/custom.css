@@ -1880,280 +1880,122 @@ section, .space {
   }
 }
 
-/* ========== FOOTER SECTION STYLING ========== */
-/* Footer - Perfect Look and Arrangement */
-#contact-sec.footer-wrapper {
-  padding-top: 70px !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  background: #f8f9fa !important;
+/* ========== BOOK AN APPOINTMENT SECTION - GREEN COLOR ========== */
+#contact-sec .sec-title {
+  color: #2a6449 !important;
+  font-weight: 800 !important;
+  font-size: 48px !important;
+  line-height: 1.2;
+  margin-bottom: 15px;
 }
 
-#contact-sec .widget-area {
-  padding: 60px 0 50px !important;
-  margin: 0 !important;
-}
-
-#contact-sec .container {
-  max-width: 1200px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-}
-
-/* Footer left side image - Center it - Full View */
-#contact-sec .footer-bg-shape2 {
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  right: auto !important;
-  margin-left: 0 !important;
-  width: 100% !important;
-  max-width: 600px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-#contact-sec .footer-bg-shape2 img {
-  display: block !important;
-  margin: 0 auto !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  height: auto !important;
-  opacity: 1 !important;
-  filter: none !important;
-  object-fit: contain !important;
-}
-
-/* Footer widgets - Perfect spacing */
-#contact-sec .footer-widget {
-  margin-bottom: 40px !important;
-  padding: 0 !important;
-}
-
-#contact-sec .widget_title {
-  margin-bottom: 25px !important;
+#contact-sec .sub-title {
   color: #2a6449 !important;
   font-weight: 700 !important;
-  font-size: 22px !important;
-  line-height: 1.3 !important;
-}
-
-/* Footer logo */
-#contact-sec .about-logo {
-  margin-bottom: 20px !important;
-  text-align: left !important;
-}
-
-#contact-sec .about-logo a {
-  display: inline-block !important;
-  transition: transform 0.3s ease !important;
-}
-
-#contact-sec .about-logo a:hover {
-  transform: scale(1.05) !important;
-}
-
-#contact-sec .about-logo img {
-  max-width: 200px !important;
-  height: auto !important;
-  display: block !important;
-}
-
-/* Footer about text */
-#contact-sec .about-text {
-  margin-bottom: 30px !important;
-  line-height: 1.7 !important;
-  color: #555 !important;
-  font-size: 15px !important;
-  max-width: 300px !important;
-}
-
-/* Footer info boxes - Perfect alignment */
-#contact-sec .info-box {
-  margin-bottom: 18px !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 15px !important;
-}
-
-#contact-sec .info-box:last-child {
-  margin-bottom: 0 !important;
-}
-
-#contact-sec .box-icon {
-  color: #2a6449 !important;
   font-size: 18px !important;
-  margin-top: 3px !important;
-  flex-shrink: 0 !important;
-  width: 20px !important;
-  text-align: center !important;
 }
 
-#contact-sec .box-text {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.6 !important;
-  flex: 1 !important;
+/* Appointment Form - Move to Left */
+#contact-sec .contact-form-5-wrapper {
+  margin-left: 0 !important;
+  margin-right: 19% !important;
+  position: relative;
+  max-width: 100% !important;
 }
 
-#contact-sec .box-link {
-  color: #555 !important;
-  text-decoration: none !important;
-  transition: color 0.3s ease !important;
-  font-size: 15px !important;
+/* Form Container Padding - Keep existing background */
+#contact-sec .appointment-form {
+  padding: 40px 35px !important;
 }
 
-#contact-sec .box-link:hover {
-  color: #2a6449 !important;
-}
-
-/* Footer menu - Perfect spacing */
-#contact-sec .menu-all-pages-container {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-#contact-sec .menu {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-#contact-sec .menu li {
-  margin-bottom: 14px !important;
-  padding: 0 !important;
-}
-
-#contact-sec .menu li:last-child {
-  margin-bottom: 0 !important;
-}
-
-#contact-sec .menu a {
-  color: #555 !important;
-  text-decoration: none !important;
+/* Form Inputs - Green Focus */
+#contact-sec .appointment-form .form-control,
+#contact-sec .appointment-form .form-select {
+  border-color: #e0e0e0 !important;
   transition: all 0.3s ease !important;
-  display: inline-block !important;
+  padding: 12px 20px !important;
   font-size: 15px !important;
-  line-height: 1.6 !important;
+  min-height: 50px !important;
 }
 
-#contact-sec .menu a:hover {
-  color: #2a6449 !important;
-  padding-left: 8px !important;
-}
-
-/* Newsletter Subscribe - Perfect styling */
-#contact-sec .footer2-subscribe-wrap {
-  margin-top: 50px !important;
-  padding: 40px 30px !important;
-  background: #fff !important;
-  border-radius: 10px !important;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Add 30px space above Subscribe section row (10px + 20px) */
-#contact-sec .row.justify-content-center {
-  margin-top: 30px !important;
-}
-
-#contact-sec .footer2-subscribe-wrap .box-title {
-  color: #2a6449 !important;
-  font-weight: 700 !important;
-  font-size: 24px !important;
-  margin-bottom: 25px !important;
-}
-
-#contact-sec .newsletter-form {
-  display: flex !important;
-  gap: 15px !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-}
-
-#contact-sec .form-group {
-  flex: 1 !important;
-  min-width: 250px !important;
-  margin: 0 !important;
-}
-
-#contact-sec .form-control {
-  width: 100% !important;
-  padding: 14px 20px !important;
-  border: 2px solid #e0e0e0 !important;
-  border-radius: 8px !important;
-  font-size: 15px !important;
-  transition: all 0.3s ease !important;
-  background: #fff !important;
-}
-
-#contact-sec .form-control:focus {
-  outline: none !important;
+#contact-sec .appointment-form .form-control:focus,
+#contact-sec .appointment-form .form-select:focus {
   border-color: #2a6449 !important;
   box-shadow: 0 0 0 3px rgba(42, 100, 73, 0.1) !important;
+  outline: none !important;
 }
 
-#contact-sec .th-btn.style3 {
+/* Textarea specific */
+#contact-sec .appointment-form textarea.form-control {
+  min-height: 120px !important;
+}
+
+/* Form Groups Spacing */
+#contact-sec .appointment-form .form-group,
+#contact-sec .appointment-form .row > div {
+  margin-bottom: 20px !important;
+}
+
+/* Submit Button - Green */
+#contact-sec .appointment-form .th-btn {
   background: #2a6449 !important;
   color: #fff !important;
   border: 2px solid #2a6449 !important;
-  padding: 14px 35px !important;
-  border-radius: 8px !important;
-  font-weight: 600 !important;
-  font-size: 15px !important;
   transition: all 0.3s ease !important;
-  white-space: nowrap !important;
+  margin-top: 10px !important;
+  padding: 14px 40px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 5px !important;
 }
 
-#contact-sec .th-btn.style3:hover {
+#contact-sec .appointment-form .th-btn:hover {
   background: transparent !important;
   color: #2a6449 !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 5px 15px rgba(42, 100, 73, 0.3) !important;
 }
 
-/* Footer copyright - Perfect styling */
-#contact-sec .copyright-wrap {
-  padding: 30px 0 !important;
-  margin-top: 0 !important;
-  border-top: 1px solid rgba(42, 100, 73, 0.15) !important;
-  background: #fff !important;
+/* Service Box Icons & Text Styling */
+#contact-sec .appointment-icon-item {
+  padding: 25px 20px !important;
+  margin-bottom: 15px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 140px !important;
+  transition: all 0.3s ease !important;
 }
 
-#contact-sec .copyright-text {
-  margin: 0 !important;
-  padding: 0 !important;
-  color: #666 !important;
-  font-size: 14px !important;
-  line-height: 1.6 !important;
+#contact-sec .appointment-icon-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-#contact-sec .copyright-text i {
+/* Icon Styling */
+#contact-sec .appointment-icon-item .box-icon {
+  margin-bottom: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#contact-sec .appointment-icon-item .box-icon img {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: contain !important;
+}
+
+/* Text Styling */
+#contact-sec .appointment-icon-item .box-title {
   color: #2a6449 !important;
-  margin-right: 5px !important;
-}
-
-#contact-sec .copyright-text a {
-  color: #2a6449 !important;
-  text-decoration: none !important;
   font-weight: 600 !important;
-  transition: color 0.3s ease !important;
-}
-
-#contact-sec .copyright-text a:hover {
-  color: #1e4d37 !important;
-  text-decoration: underline !important;
-}
-
-/* Footer row spacing */
-#contact-sec .row {
-  margin-left: -15px !important;
-  margin-right: -15px !important;
-}
-
-#contact-sec .row > [class*="col-"] {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  text-align: center !important;
 }
 
 /* Responsive adjustments */
@@ -2169,6 +2011,14 @@ section, .space {
   #contact-sec .footer2-subscribe-wrap {
     margin-top: 40px !important;
     padding: 35px 25px !important;
+  }
+  
+  #contact-sec .sec-title {
+    font-size: 42px !important;
+  }
+  
+  #contact-sec .appointment-form {
+    padding: 35px 30px !important;
   }
 }
 
@@ -2192,11 +2042,56 @@ section, .space {
   #contact-sec .form-group {
     min-width: 100% !important;
   }
+  
+  #contact-sec .contact-form-5-wrapper {
+    margin-right: 5% !important;
+  }
+  
+  #contact-sec .sec-title {
+    font-size: 36px !important;
+  }
+  
+  #contact-sec .appointment-form {
+    padding: 30px 25px !important;
+  }
+  
+  #contact-sec .footer-dog-shape img,
+  #contact-sec .footer-cat-shape img,
+  #contact-sec .footer-pet-shape img {
+    width: 100px;
+  }
+  
+  #contact-sec .footer-pet-2,
+  #contact-sec .footer-pet-3 {
+    display: none;
+  }
+  
+  #contact-sec .appointment-icon-item {
+    padding: 20px 15px !important;
+    min-height: 130px !important;
+  }
+  
+  #contact-sec .appointment-icon-item .box-icon img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  
+  #contact-sec .appointment-icon-item .box-title {
+    font-size: 15px !important;
+  }
 }
 
 @media (max-width: 767px) {
   #contact-sec {
     padding-top: 40px !important;
+  }
+  
+  #contact-sec .contact-form-5-wrapper {
+    margin-right: 0 !important;
+  }
+  
+  #contact-sec .sec-title {
+    font-size: 32px !important;
   }
   
   #contact-sec .widget-area {
@@ -2236,5 +2131,1386 @@ section, .space {
   #contact-sec .footer2-subscribe-wrap .box-title {
     font-size: 20px !important;
   }
+  
+  #contact-sec .appointment-form {
+    padding: 25px 20px !important;
+  }
+  
+  #contact-sec .appointment-form .form-control,
+  #contact-sec .appointment-form .form-select {
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+  }
+  
+  #contact-sec .appointment-form .th-btn {
+    padding: 12px 30px !important;
+    font-size: 15px !important;
+  }
+  
+  #contact-sec .appointment-icon-item {
+    padding: 18px 12px !important;
+    min-height: 120px !important;
+  }
+  
+  #contact-sec .appointment-icon-item .box-icon img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  #contact-sec .appointment-icon-item .box-title {
+    font-size: 14px !important;
+  }
+  
+  #contact-sec .footer-dog-shape img,
+  #contact-sec .footer-cat-shape img,
+  #contact-sec .footer-pet-shape img {
+    width: 80px;
+  }
+  
+  #contact-sec .footer-pet-1,
+  #contact-sec .footer-pet-2,
+  #contact-sec .footer-pet-3 {
+    display: none;
+  }
 }
 
+/* ========== CONTACT SECTION ANIMATIONS - LIKE SERVICES ========== */
+
+/* Animated Paw Prints Background - Full Section */
+#contact-sec .contact-paw-prints-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#contact-sec .contact-paw-print {
+  position: absolute;
+  opacity: 0.4;
+  animation: contactFloatPaw 20s infinite ease-in-out;
+}
+
+#contact-sec .contact-paw-print img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  animation: contactPawPulse 3s ease-in-out infinite;
+  filter: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+@keyframes contactPawPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+@keyframes contactFloatPaw {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 10px) rotate(270deg) scale(1.05);
+  }
+}
+
+/* Paw prints positioned across full section */
+#contact-sec .contact-paw-1 {
+  top: 5%;
+  left: 3%;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+#contact-sec .contact-paw-2 {
+  top: 15%;
+  right: 5%;
+  animation-delay: 2s;
+  animation-duration: 22s;
+}
+
+#contact-sec .contact-paw-3 {
+  top: 30%;
+  left: 8%;
+  animation-delay: 4s;
+  animation-duration: 20s;
+}
+
+#contact-sec .contact-paw-4 {
+  top: 45%;
+  right: 10%;
+  animation-delay: 1s;
+  animation-duration: 19s;
+}
+
+#contact-sec .contact-paw-5 {
+  top: 60%;
+  left: 12%;
+  animation-delay: 3s;
+  animation-duration: 21s;
+}
+
+#contact-sec .contact-paw-6 {
+  top: 75%;
+  right: 15%;
+  animation-delay: 5s;
+  animation-duration: 23s;
+}
+
+#contact-sec .contact-paw-7 {
+  top: 85%;
+  left: 18%;
+  animation-delay: 1.5s;
+  animation-duration: 17s;
+}
+
+#contact-sec .contact-paw-8 {
+  top: 25%;
+  right: 20%;
+  animation-delay: 3.5s;
+  animation-duration: 24s;
+}
+
+/* Floating Pet Shapes - Dog & Cat - Full Section */
+#contact-sec .contact-floating-pet-shapes-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#contact-sec .contact-floating-pet-top {
+  position: absolute;
+  opacity: 0.5;
+}
+
+#contact-sec .contact-floating-pet-top img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+#contact-sec .contact-pet-top-1 {
+  top: 10%;
+  left: 2%;
+  animation: contactPetFloatTop1 14s ease-in-out infinite;
+}
+
+#contact-sec .contact-pet-top-2 {
+  top: 35%;
+  right: 3%;
+  animation: contactPetFloatTop2 16s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+#contact-sec .contact-pet-top-3 {
+  top: 55%;
+  left: 15%;
+  animation: contactPetFloatTop3 15s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+#contact-sec .contact-pet-top-4 {
+  top: 75%;
+  right: 12%;
+  animation: contactPetFloatTop4 17s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+#contact-sec .contact-pet-top-5 {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: contactPetFloatTop5 18s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+#contact-sec .contact-pet-top-5 img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+@keyframes contactPetFloatTop1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) translateX(15px) rotate(8deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) rotate(-8deg) scale(0.95);
+  }
+  75% {
+    transform: translateY(-25px) translateX(20px) rotate(5deg) scale(1.05);
+  }
+}
+
+@keyframes contactPetFloatTop2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) translateX(-18px) rotate(-10deg) scale(1.15);
+  }
+  50% {
+    transform: translateY(-15px) translateX(12px) rotate(10deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-22px) rotate(-5deg) scale(1.1);
+  }
+}
+
+@keyframes contactPetFloatTop3 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-18px) translateX(14px) rotate(6deg) scale(1.08);
+  }
+  50% {
+    transform: translateY(-12px) translateX(-8px) rotate(-6deg) scale(0.92);
+  }
+  75% {
+    transform: translateY(-22px) translateX(18px) rotate(4deg) scale(1.06);
+  }
+}
+
+@keyframes contactPetFloatTop4 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-22px) translateX(-15px) rotate(-7deg) scale(1.12);
+  }
+  50% {
+    transform: translateY(-16px) translateX(18px) rotate(7deg) scale(0.88);
+  }
+  75% {
+    transform: translateY(-28px) translateX(-20px) rotate(-4deg) scale(1.09);
+  }
+}
+
+@keyframes contactPetFloatTop5 {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-20px) rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-12px) rotate(-10deg) scale(0.95);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-25px) rotate(5deg) scale(1.05);
+  }
+}
+
+/* Shape Animations - Full Section */
+#contact-sec .contact-top-shape-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#contact-sec .contact-top-shape {
+  position: absolute;
+  opacity: 0.35;
+}
+
+#contact-sec .contact-top-shape img {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+#contact-sec .contact-shape-top-1 {
+  top: 8%;
+  left: 5%;
+  animation: contactShapeFloatTop1 12s ease-in-out infinite;
+}
+
+#contact-sec .contact-shape-top-2 {
+  top: 25%;
+  right: 6%;
+  animation: contactShapeFloatTop2 14s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+#contact-sec .contact-shape-top-3 {
+  top: 40%;
+  left: 20%;
+  animation: contactShapeFloatTop3 13s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+#contact-sec .contact-shape-top-4 {
+  top: 60%;
+  right: 18%;
+  animation: contactShapeFloatTop4 15s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+#contact-sec .contact-shape-top-5 {
+  top: 80%;
+  left: 35%;
+  animation: contactShapeFloatTop5 16s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+#contact-sec .contact-shape-top-6 {
+  top: 50%;
+  right: 30%;
+  animation: contactShapeFloatTop6 14s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes contactShapeFloatTop1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) translateX(12px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-8px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-18px) translateX(15px) rotate(270deg) scale(1.05);
+  }
+}
+
+@keyframes contactShapeFloatTop2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-18px) translateX(-14px) rotate(-90deg) scale(1.15);
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px) rotate(-180deg) scale(0.85);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-18px) rotate(-270deg) scale(1.08);
+  }
+}
+
+@keyframes contactShapeFloatTop3 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-16px) translateX(13px) rotate(85deg) scale(1.12);
+  }
+  50% {
+    transform: translateY(-9px) translateX(-9px) rotate(175deg) scale(0.88);
+  }
+  75% {
+    transform: translateY(-19px) translateX(16px) rotate(265deg) scale(1.06);
+  }
+}
+
+@keyframes contactShapeFloatTop4 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-17px) translateX(-13px) rotate(-85deg) scale(1.13);
+  }
+  50% {
+    transform: translateY(-11px) translateX(11px) rotate(-175deg) scale(0.87);
+  }
+  75% {
+    transform: translateY(-21px) translateX(-17px) rotate(-265deg) scale(1.09);
+  }
+}
+
+@keyframes contactShapeFloatTop5 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-14px) translateX(11px) rotate(88deg) scale(1.11);
+  }
+  50% {
+    transform: translateY(-7px) translateX(-7px) rotate(178deg) scale(0.89);
+  }
+  75% {
+    transform: translateY(-17px) translateX(14px) rotate(268deg) scale(1.07);
+  }
+}
+
+@keyframes contactShapeFloatTop6 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-19px) translateX(-15px) rotate(-88deg) scale(1.14);
+  }
+  50% {
+    transform: translateY(-12px) translateX(12px) rotate(-178deg) scale(0.86);
+  }
+  75% {
+    transform: translateY(-22px) translateX(-19px) rotate(-268deg) scale(1.1);
+  }
+}
+
+/* Responsive adjustments for contact animations */
+@media (max-width: 991px) {
+  #contact-sec .contact-floating-pet-top img {
+    width: 100px;
+  }
+  
+  #contact-sec .contact-top-shape img {
+    width: 60px;
+  }
+  
+  #contact-sec .contact-paw-print img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  #contact-sec .contact-floating-pet-top img {
+    width: 80px;
+  }
+  
+  #contact-sec .contact-top-shape img {
+    width: 50px;
+  }
+  
+  #contact-sec .contact-paw-print img {
+    width: 40px;
+  }
+  
+  #contact-sec .contact-pet-top-3,
+  #contact-sec .contact-pet-top-4,
+  #contact-sec .contact-pet-top-5,
+  #contact-sec .contact-shape-top-3,
+  #contact-sec .contact-shape-top-4,
+  #contact-sec .contact-shape-top-5,
+  #contact-sec .contact-shape-top-6 {
+    display: none;
+  }
+}
+
+
+
+/* ========== FOOTER SECTION STYLING ========== */
+/* Footer - Perfect Look and Arrangement */
+
+#contact-sec.footer-wrapper {
+  padding-top: 70px !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  background: #f8f9fa !important;
+}
+
+#contact-sec .widget-area {
+  padding: 60px 0 50px !important;
+  margin: 0 !important;
+}
+
+#contact-sec .container {
+  max-width: 1200px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* Footer left side image - Moved 15px right */
+#contact-sec .footer-bg-shape2 {
+  bottom: 0% !important;
+  left: 2% !important;
+  z-index: 0 !important;
+  width: auto !important;
+  max-width: 600px !important;
+}
+
+#contact-sec .footer-bg-shape2 img {
+  display: block !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  opacity: 1 !important;
+  filter: none !important;
+  object-fit: contain !important;
+}
+
+#contact-sec .footer-bg-shape3 {
+  bottom: 5% !important;
+  right: 1% !important;
+  z-index: 0 !important;
+  width: auto !important;
+  max-width: 500px !important;
+}
+
+#contact-sec .footer-bg-shape3 img {
+  display: block !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  opacity: 1 !important;
+  filter: none !important;
+  object-fit: contain !important;
+}
+
+/* Footer widgets - Perfect top alignment */
+#contact-sec .footer-widget {
+  margin-bottom: 40px !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+/* Ensure logo section aligns with widget titles */
+#contact-sec .th-widget-about {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+#contact-sec .widget_title {
+  margin-bottom: 25px !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  color: #2a6449 !important;
+  font-weight: 800 !important;
+  font-size: 25px !important;
+  line-height: 1.3 !important;
+}
+
+/* Widget nav menu alignment */
+#contact-sec .widget_nav_menu {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+/* Footer logo - Perfect top alignment */
+#contact-sec .about-logo {
+  margin-bottom: 20px !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  text-align: left !important;
+  align-self: flex-start !important;
+  width: 100% !important;
+}
+
+#contact-sec .about-logo a {
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+
+#contact-sec .about-logo a:hover {
+  transform: scale(1.05) !important;
+}
+
+#contact-sec .about-logo img {
+  max-width: 200px !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Footer about text */
+#contact-sec .about-text {
+  margin-bottom: 30px !important;
+  line-height: 1.7 !important;
+  color: #555 !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  max-width: 300px !important;
+}
+
+/* Footer info boxes - Perfect alignment */
+#contact-sec .info-box {
+  margin-bottom: 18px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 15px !important;
+}
+
+#contact-sec .info-box:last-child {
+  margin-bottom: 0 !important;
+}
+
+#contact-sec .box-icon {
+  color: #2a6449 !important;
+  font-size: 18px !important;
+  margin-top: 3px !important;
+  flex-shrink: 0 !important;
+  width: 20px !important;
+  text-align: center !important;
+}
+
+#contact-sec .box-text {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.6 !important;
+  flex: 1 !important;
+  font-weight: 500 !important;
+}
+
+#contact-sec .box-link {
+  color: #555 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+#contact-sec .box-link:hover {
+  color: #2a6449 !important;
+}
+
+/* Footer menu - Perfect spacing and top alignment */
+#contact-sec .menu-all-pages-container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#contact-sec .menu {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#contact-sec .menu li {
+  margin-bottom: 14px !important;
+  padding: 0 !important;
+}
+
+#contact-sec .menu li:last-child {
+  margin-bottom: 0 !important;
+}
+
+#contact-sec .menu a {
+  color: #555 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+#contact-sec .menu a:hover {
+  color: #2a6449 !important;
+  padding-left: 8px !important;
+}
+
+/* Perfect vertical alignment for all footer columns */
+#contact-sec .footer-main-row {
+  align-items: flex-start !important;
+  display: flex !important;
+}
+
+#contact-sec .footer-main-row > [class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+#contact-sec .footer-main-row > [class*="col-"] > .footer-widget {
+  flex: 1 !important;
+  width: 100% !important;
+}
+
+/* Ensure all widgets start at same top position */
+#contact-sec .row.gy-4 {
+  align-items: flex-start !important;
+}
+
+/* Newsletter Subscribe - Perfect alignment */
+#contact-sec .footer-subscribe-row {
+  margin-top: 50px !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#contact-sec .footer2-subscribe-wrap {
+  margin: 0 auto !important;
+  padding: 40px 30px !important;
+  background: #fff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08) !important;
+  position: relative;
+  z-index: 2;
+  width: 100% !important;
+  max-width: 600px !important;
+  transform: translateY(-5%) translateX(calc(7% + 80px)) !important;
+}
+
+#contact-sec .footer2-subscribe-wrap .box-title {
+  color: #2a6449 !important;
+  font-weight: 800 !important;
+  font-size: 29px !important;
+  margin-bottom: 35px !important;
+  margin-top: 0 !important;
+}
+
+#contact-sec .newsletter-form {
+  display: flex !important;
+  gap: 55px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+#contact-sec .form-group {
+  flex: 1 !important;
+  min-width: 250px !important;
+  margin: 0 !important;
+}
+
+#contact-sec .form-control {
+  width: 100% !important;
+  padding: 14px 20px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  background: #fff !important;
+}
+
+#contact-sec .form-control:focus {
+  outline: none !important;
+  border-color: #2a6449 !important;
+  box-shadow: 0 0 0 3px rgba(42, 100, 73, 0.1) !important;
+}
+
+#contact-sec .th-btn.style3 {
+  background: #2a6449 !important;
+  color: #fff !important;
+  border: 2px solid #2a6449 !important;
+  padding: 14px 35px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+#contact-sec .th-btn.style3:hover {
+  background: transparent !important;
+  color: #2a6449 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(42, 100, 73, 0.3) !important;
+}
+
+/* Footer Dog & Cat Animations */
+#contact-sec .footer-pet-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#contact-sec .footer-dog-shape,
+#contact-sec .footer-cat-shape,
+#contact-sec .footer-pet-shape {
+  position: absolute;
+  opacity: 0.4;
+  filter: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+#contact-sec .footer-dog-shape img,
+#contact-sec .footer-cat-shape img,
+#contact-sec .footer-pet-shape img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+/* Left Dog */
+#contact-sec .footer-dog-left {
+  bottom: 10%;
+  left: 1%;
+  animation: footerPetFloat1 15s ease-in-out infinite;
+  z-index: 1;
+}
+
+#contact-sec .footer-dog-left img {
+  width: 150px !important;
+  height: auto !important;
+}
+
+/* Right Cat */
+#contact-sec .footer-cat-right {
+  bottom: 15%;
+  right: 2%;
+  animation: footerPetFloat2 16s ease-in-out infinite;
+  animation-delay: 2s;
+  z-index: 3 !important;
+}
+
+#contact-sec .footer-cat-right img {
+  width: 150px !important;
+  height: auto !important;
+}
+
+/* Pet 1 - Top Left */
+#contact-sec .footer-pet-1 {
+  top: 20%;
+  left: 5%;
+  animation: footerPetFloat3 14s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Pet 2 - Top Right */
+#contact-sec .footer-pet-2 {
+  top: 25%;
+  right: 5%;
+  animation: footerPetFloat4 17s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* Pet 3 - Middle */
+#contact-sec .footer-pet-3 {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: footerPetFloat5 18s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+#contact-sec .footer-pet-3 img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+@keyframes footerPetFloat1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) translateX(15px) rotate(8deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) rotate(-8deg) scale(0.95);
+  }
+  75% {
+    transform: translateY(-25px) translateX(20px) rotate(5deg) scale(1.05);
+  }
+}
+
+@keyframes footerPetFloat2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) translateX(-18px) rotate(-10deg) scale(1.15);
+  }
+  50% {
+    transform: translateY(-15px) translateX(12px) rotate(10deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-22px) rotate(-5deg) scale(1.1);
+  }
+}
+
+@keyframes footerPetFloat3 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-18px) translateX(14px) rotate(6deg) scale(1.08);
+  }
+  50% {
+    transform: translateY(-12px) translateX(-8px) rotate(-6deg) scale(0.92);
+  }
+  75% {
+    transform: translateY(-22px) translateX(18px) rotate(4deg) scale(1.06);
+  }
+}
+
+@keyframes footerPetFloat4 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-22px) translateX(-15px) rotate(-7deg) scale(1.12);
+  }
+  50% {
+    transform: translateY(-16px) translateX(18px) rotate(7deg) scale(0.88);
+  }
+  75% {
+    transform: translateY(-28px) translateX(-20px) rotate(-4deg) scale(1.09);
+  }
+}
+
+@keyframes footerPetFloat5 {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-20px) rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-12px) rotate(-10deg) scale(0.95);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-25px) rotate(5deg) scale(1.05);
+  }
+}
+
+/* Footer copyright - Perfect styling */
+#contact-sec .copyright-wrap {
+  padding: 30px 0 !important;
+  margin-top: 0 !important;
+  border-top: 1px solid rgba(42, 100, 73, 0.15) !important;
+  background: #fff !important;
+  position: relative;
+  z-index: 2;
+}
+
+#contact-sec .copyright-text {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #666 !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+#contact-sec .copyright-text i {
+  color: #2a6449 !important;
+  margin-right: 5px !important;
+}
+
+#contact-sec .copyright-text a {
+  color: #2a6449 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
+}
+
+#contact-sec .copyright-text a:hover {
+  color: #1e4d37 !important;
+  text-decoration: underline !important;
+}
+
+/* Footer row spacing */
+#contact-sec .row {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+#contact-sec .row > [class*="col-"] {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* ========== FOOTER ANIMATIONS - LIKE WHY CHOOSE US ========== */
+/* Footer Dog Animations - Left Side */
+#contact-sec .footer-dog-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Footer Dog Shape Animations - Left Side */
+#contact-sec .footer-why-dog-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.3;
+  left: 3%;
+}
+
+#contact-sec .footer-why-dog-shape img {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(45%) saturate(1200%) hue-rotate(120deg) brightness(0.85) contrast(0.9);
+  opacity: 0.7;
+}
+
+/* Left Dog 1 - Top Left */
+#contact-sec .footer-why-dog-left-1 {
+  top: 12%;
+  animation: footerWhyDogFloatLeft1 13s ease-in-out infinite;
+}
+
+/* Left Dog 2 - Bottom Left */
+#contact-sec .footer-why-dog-left-2 {
+  bottom: 15%;
+  animation: footerWhyDogFloatLeft2 15s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* Combined Cat & Dog Image - Left Side - Original Image (No Filter) */
+#contact-sec .footer-why-dogcat-left {
+  top: 60%;
+  left: 4%;
+  transform: translateY(-50%);
+  animation: footerWhyDogcatFloatLeft 20s ease-in-out infinite;
+  animation-delay: 2.5s;
+  opacity: 0.8 !important;
+  z-index: 2;
+}
+
+#contact-sec .footer-why-dogcat-left img {
+  width: 180px !important;
+  height: auto;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+  border-radius: 50%;
+}
+
+/* Footer Cat Animations - Right Side */
+#contact-sec .footer-cat-animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Footer Cat Shape Animations - Right Side */
+#contact-sec .footer-why-cat-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.3;
+  right: 3%;
+}
+
+#contact-sec .footer-why-cat-shape img {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 0.7;
+}
+
+/* Right Cat 1 - Top Right */
+#contact-sec .footer-why-cat-right-1 {
+  top: 12%;
+  animation: footerWhyCatFloatRight1 13s ease-in-out infinite;
+  animation-delay: 1s;
+  opacity: 0.8 !important;
+  z-index: 2;
+}
+
+#contact-sec .footer-why-cat-right-1 img {
+  width: 180px !important;
+  height: auto;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Right Cat 2 - Bottom Right */
+#contact-sec .footer-why-cat-right-2 {
+  bottom: 15%;
+  animation: footerWhyCatFloatRight2 15s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+#contact-sec .footer-why-cat-right-2 img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Footer Floating Shape Animations */
+#contact-sec .footer-why-float-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+#contact-sec .footer-why-float-shape img {
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(45%) saturate(1200%) hue-rotate(120deg) brightness(0.85) contrast(0.9);
+  opacity: 0.6;
+}
+
+/* Left Shape 1 - Middle Top Left */
+#contact-sec .footer-why-shape-left-1 {
+  top: 25%;
+  left: 1%;
+  animation: footerWhyShapeFloatLeft1 18s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Left Shape 2 - Middle Bottom Left */
+#contact-sec .footer-why-shape-left-2 {
+  bottom: 30%;
+  left: 2%;
+  animation: footerWhyShapeFloatLeft2 16s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Right Shape 1 - Middle Top Right */
+#contact-sec .footer-why-shape-right-1 {
+  top: 25%;
+  right: 1%;
+  animation: footerWhyShapeFloatRight1 18s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Right Shape 2 - Middle Bottom Right */
+#contact-sec .footer-why-shape-right-2 {
+  bottom: 30%;
+  right: 2%;
+  animation: footerWhyShapeFloatRight2 16s ease-in-out infinite;
+  animation-delay: 3.5s;
+}
+
+/* Right Shape 3 - Center Right */
+#contact-sec .footer-why-shape-right-3 {
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  animation: footerWhyShapeFloatRight3 20s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+/* Footer Dog Float Animations - Left Side */
+@keyframes footerWhyDogFloatLeft1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-26px) translateX(22px) rotate(7deg);
+  }
+  50% {
+    transform: translateY(-16px) translateX(-18px) rotate(-7deg);
+  }
+  75% {
+    transform: translateY(-30px) translateX(25px) rotate(5deg);
+  }
+}
+
+@keyframes footerWhyDogFloatLeft2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-28px) translateX(-22px) rotate(-7deg);
+  }
+  50% {
+    transform: translateY(-18px) translateX(20px) rotate(7deg);
+  }
+  75% {
+    transform: translateY(-32px) translateX(-26px) rotate(-5deg);
+  }
+}
+
+/* Footer Cat Float Animations - Right Side */
+@keyframes footerWhyCatFloatRight1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-24px) translateX(-20px) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-16px) translateX(18px) rotate(6deg);
+  }
+  75% {
+    transform: translateY(-28px) translateX(-24px) rotate(-4deg);
+  }
+}
+
+@keyframes footerWhyCatFloatRight2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-26px) translateX(22px) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-18px) translateX(-16px) rotate(-6deg);
+  }
+  75% {
+    transform: translateY(-30px) translateX(26px) rotate(4deg);
+  }
+}
+
+/* Footer Shape Float Animations - Left Side */
+@keyframes footerWhyShapeFloatLeft1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) rotate(100deg) scale(1.15);
+  }
+  50% {
+    transform: translate(-22px, 22px) rotate(190deg) scale(0.85);
+  }
+  75% {
+    transform: translate(35px, 14px) rotate(280deg) scale(1.08);
+  }
+}
+
+@keyframes footerWhyShapeFloatLeft2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-28px, -32px) rotate(-100deg) scale(1.18);
+  }
+  50% {
+    transform: translate(24px, 26px) rotate(-190deg) scale(0.82);
+  }
+  75% {
+    transform: translate(-32px, 18px) rotate(-280deg) scale(1.1);
+  }
+}
+
+/* Footer Shape Float Animations - Right Side */
+@keyframes footerWhyShapeFloatRight1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-30px, -30px) rotate(-100deg) scale(1.15);
+  }
+  50% {
+    transform: translate(24px, 24px) rotate(-190deg) scale(0.85);
+  }
+  75% {
+    transform: translate(-35px, 16px) rotate(-280deg) scale(1.08);
+  }
+}
+
+@keyframes footerWhyShapeFloatRight2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(28px, -32px) rotate(100deg) scale(1.18);
+  }
+  50% {
+    transform: translate(-24px, 26px) rotate(190deg) scale(0.82);
+  }
+  75% {
+    transform: translate(32px, 20px) rotate(280deg) scale(1.1);
+  }
+}
+
+/* Footer Shape Float Animation - Right Side */
+@keyframes footerWhyShapeFloatRight3 {
+  0%, 100% {
+    transform: translateY(-50%) translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-50%) translate(-32px, -28px) rotate(-110deg) scale(1.2);
+  }
+  50% {
+    transform: translateY(-50%) translate(26px, 28px) rotate(-200deg) scale(0.8);
+  }
+  75% {
+    transform: translateY(-50%) translate(-36px, 18px) rotate(-290deg) scale(1.12);
+  }
+}
+
+/* Footer Dogcat Float Animation - Left Side */
+@keyframes footerWhyDogcatFloatLeft {
+  0%, 100% {
+    transform: translateY(-50%) translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-50%) translate(32px, -28px) rotate(110deg) scale(1.2);
+  }
+  50% {
+    transform: translateY(-50%) translate(-26px, 28px) rotate(200deg) scale(0.8);
+  }
+  75% {
+    transform: translateY(-50%) translate(36px, 18px) rotate(290deg) scale(1.12);
+  }
+}
+
+/* Responsive adjustments for footer animations */
+@media (max-width: 991px) {
+  #contact-sec .footer-why-dog-shape img,
+  #contact-sec .footer-why-cat-shape img {
+    width: 110px;
+  }
+  
+  #contact-sec .footer-why-float-shape img {
+    width: 65px;
+  }
+  
+  #contact-sec .footer-why-dog-left-2,
+  #contact-sec .footer-why-cat-right-2,
+  #contact-sec .footer-why-shape-left-2,
+  #contact-sec .footer-why-shape-right-2,
+  #contact-sec .footer-why-shape-right-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #contact-sec .footer-why-dog-shape img,
+  #contact-sec .footer-why-cat-shape img {
+    width: 95px;
+  }
+  
+  #contact-sec .footer-why-float-shape img {
+    width: 60px;
+  }
+  
+  #contact-sec .footer-why-dog-left-2,
+  #contact-sec .footer-why-cat-right-2,
+  #contact-sec .footer-why-shape-left-1,
+  #contact-sec .footer-why-shape-left-2,
+  #contact-sec .footer-why-shape-right-1,
+  #contact-sec .footer-why-shape-right-2,
+  #contact-sec .footer-why-shape-right-3 {
+    display: none;
+  }
+}

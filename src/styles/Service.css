@@ -2,7 +2,7 @@
 .service-section {
   position: relative;
   padding: 60px 0 80px;
-  background: linear-gradient(135deg, #f0f7ff 0%, #e1f5fe 50%, #fff8e1 100%);
+  background: #ffffff;
   overflow: hidden;
 }
 
@@ -23,52 +23,103 @@
 
 .paw-print {
   position: absolute;
-  font-size: 40px;
-  opacity: 0.08;
+  opacity: 0.4;
   animation: floatPaw 20s infinite ease-in-out;
+  /* No color filter - original image colors */
 }
 
+.paw-print img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  animation: pawPulse 3s ease-in-out infinite;
+  filter: none; /* Original image - no blur, no color change */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+@keyframes pawPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+/* Paw prints positioned at top */
 .paw-1 {
-  top: 10%;
-  left: 5%;
+  top: 5%;
+  left: 3%;
   animation-delay: 0s;
   animation-duration: 18s;
 }
 
 .paw-2 {
-  top: 25%;
-  right: 8%;
-  animation-delay: 3s;
+  top: 8%;
+  right: 5%;
+  animation-delay: 2s;
   animation-duration: 22s;
 }
 
 .paw-3 {
-  top: 50%;
-  left: 12%;
-  animation-delay: 6s;
+  top: 12%;
+  left: 8%;
+  animation-delay: 4s;
   animation-duration: 20s;
 }
 
 .paw-4 {
-  top: 70%;
-  right: 15%;
-  animation-delay: 9s;
+  top: 6%;
+  right: 10%;
+  animation-delay: 1s;
   animation-duration: 19s;
 }
 
 .paw-5 {
-  bottom: 15%;
-  left: 20%;
-  animation-delay: 12s;
+  top: 10%;
+  left: 12%;
+  animation-delay: 3s;
   animation-duration: 21s;
 }
 
 .paw-6 {
-  top: 40%;
-  right: 25%;
-  animation-delay: 15s;
+  top: 4%;
+  right: 15%;
+  animation-delay: 5s;
   animation-duration: 23s;
 }
+
+.paw-7 {
+  top: 9%;
+  left: 18%;
+  animation-delay: 1.5s;
+  animation-duration: 17s;
+}
+
+.paw-8 {
+  top: 7%;
+  right: 20%;
+  animation-delay: 3.5s;
+  animation-duration: 24s;
+}
+
+.paw-9 {
+  top: 11%;
+  left: 25%;
+  animation-delay: 2.5s;
+  animation-duration: 19s;
+}
+
+.paw-10 {
+  top: 5%;
+  right: 25%;
+  animation-delay: 4.5s;
+  animation-duration: 21s;
+}
+
 
 @keyframes floatPaw {
   0%, 100% {
@@ -86,16 +137,169 @@
 }
 
 /* ===================================
-   RUNNING DOG ANIMATION 🐕💨
+   TOP FLOATING PET SHAPES - DOG & CAT
    ================================== */
 
-.running-dog {
+.floating-pet-shapes-top {
   position: absolute;
-  bottom: 20%;
-  font-size: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  pointer-events: none;
   z-index: 1;
-  animation: dogRun 15s linear infinite;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.floating-pet-top {
+  position: absolute;
+  opacity: 0.5;
+  /* No color filter - original image colors */
+}
+
+.floating-pet-top img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: none; /* Original image - no blur, no color change */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.pet-top-1 {
+  top: 8%;
+  left: 2%;
+  animation: petFloatTop1 14s ease-in-out infinite;
+}
+
+.pet-top-2 {
+  top: 12%;
+  right: 3%;
+  animation: petFloatTop2 16s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.pet-top-3 {
+  top: 6%;
+  left: 15%;
+  animation: petFloatTop3 15s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.pet-top-4 {
+  top: 10%;
+  right: 12%;
+  animation: petFloatTop4 17s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.pet-top-5 {
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: petFloatTop5 18s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.pet-top-5 img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.pet-top-6 {
+  top: 8%;
+  right: 20%;
+  animation: petFloatTop6 13s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes petFloatTop1 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) translateX(15px) rotate(8deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) rotate(-8deg) scale(0.95);
+  }
+  75% {
+    transform: translateY(-25px) translateX(20px) rotate(5deg) scale(1.05);
+  }
+}
+
+@keyframes petFloatTop2 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) translateX(-18px) rotate(-10deg) scale(1.15);
+  }
+  50% {
+    transform: translateY(-15px) translateX(12px) rotate(10deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-22px) rotate(-5deg) scale(1.1);
+  }
+}
+
+@keyframes petFloatTop3 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-18px) translateX(14px) rotate(6deg) scale(1.08);
+  }
+  50% {
+    transform: translateY(-12px) translateX(-8px) rotate(-6deg) scale(0.92);
+  }
+  75% {
+    transform: translateY(-22px) translateX(18px) rotate(4deg) scale(1.06);
+  }
+}
+
+@keyframes petFloatTop4 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-22px) translateX(-15px) rotate(-7deg) scale(1.12);
+  }
+  50% {
+    transform: translateY(-16px) translateX(18px) rotate(7deg) scale(0.88);
+  }
+  75% {
+    transform: translateY(-28px) translateX(-20px) rotate(-4deg) scale(1.09);
+  }
+}
+
+@keyframes petFloatTop5 {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-20px) rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-12px) rotate(-10deg) scale(0.95);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-25px) rotate(5deg) scale(1.05);
+  }
+}
+
+@keyframes petFloatTop6 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-24px) translateX(16px) rotate(9deg) scale(1.13);
+  }
+  50% {
+    transform: translateY(-14px) translateX(-12px) rotate(-9deg) scale(0.87);
+  }
+  75% {
+    transform: translateY(-26px) translateX(22px) rotate(4deg) scale(1.08);
+  }
 }
 
 @keyframes dogRun {
@@ -120,80 +324,162 @@
 }
 
 /* ===================================
-   FOOD BOWL ANIMATION 🍖
+   TOP SHAPE ANIMATIONS
    ================================== */
 
-.food-bowl {
+.top-shape-animations {
   position: absolute;
-  top: 15%;
-  right: 10%;
-  font-size: 45px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  pointer-events: none;
   z-index: 1;
-  animation: foodBounce 3s ease-in-out infinite;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
-@keyframes foodBounce {
+.top-shape {
+  position: absolute;
+  opacity: 0.35;
+  /* No color filter - original image colors */
+}
+
+.top-shape img {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  filter: none; /* Original image - no blur, no color change */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.shape-top-1 {
+  top: 3%;
+  left: 5%;
+  animation: shapeFloatTop1 12s ease-in-out infinite;
+}
+
+.shape-top-2 {
+  top: 7%;
+  right: 6%;
+  animation: shapeFloatTop2 14s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.shape-top-3 {
+  top: 5%;
+  left: 20%;
+  animation: shapeFloatTop3 13s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.shape-top-4 {
+  top: 9%;
+  right: 18%;
+  animation: shapeFloatTop4 15s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.shape-top-5 {
+  top: 4%;
+  left: 35%;
+  animation: shapeFloatTop5 16s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.shape-top-6 {
+  top: 8%;
+  right: 30%;
+  animation: shapeFloatTop6 14s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes shapeFloatTop1 {
   0%, 100% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
   }
   25% {
-    transform: translateY(-20px) rotate(-5deg) scale(1.1);
+    transform: translateY(-15px) translateX(12px) rotate(90deg) scale(1.1);
   }
   50% {
-    transform: translateY(0) rotate(5deg) scale(1);
+    transform: translateY(-8px) translateX(-8px) rotate(180deg) scale(0.9);
   }
   75% {
-    transform: translateY(-10px) rotate(-3deg) scale(1.05);
+    transform: translateY(-18px) translateX(15px) rotate(270deg) scale(1.05);
   }
 }
 
-/* ===================================
-   FLOATING DOG BONE ANIMATION 🦴
-   ================================== */
-
-.dog-bone {
-  position: absolute;
-  top: 30%;
-  left: 8%;
-  font-size: 40px;
-  z-index: 1;
-  animation: boneFloat 4s ease-in-out infinite;
-  opacity: 0.7;
-}
-
-@keyframes boneFloat {
+@keyframes shapeFloatTop2 {
   0%, 100% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-18px) translateX(-14px) rotate(-90deg) scale(1.15);
   }
   50% {
-    transform: translateY(-30px) rotate(180deg);
+    transform: translateY(-10px) translateX(10px) rotate(-180deg) scale(0.85);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-18px) rotate(-270deg) scale(1.08);
   }
 }
 
-/* ===================================
-   HEART BEAT ANIMATION ❤️
-   ================================== */
-
-.heart-beat {
-  position: absolute;
-  bottom: 30%;
-  right: 15%;
-  font-size: 35px;
-  z-index: 1;
-  animation: heartBeat 2s ease-in-out infinite;
-  color: #ff6b9d;
-}
-
-@keyframes heartBeat {
+@keyframes shapeFloatTop3 {
   0%, 100% {
-    transform: scale(1);
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
   }
-  10%, 30% {
-    transform: scale(1.3);
+  25% {
+    transform: translateY(-16px) translateX(13px) rotate(85deg) scale(1.12);
   }
-  20%, 40% {
-    transform: scale(1);
+  50% {
+    transform: translateY(-9px) translateX(-9px) rotate(175deg) scale(0.88);
+  }
+  75% {
+    transform: translateY(-19px) translateX(16px) rotate(265deg) scale(1.06);
+  }
+}
+
+@keyframes shapeFloatTop4 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-17px) translateX(-13px) rotate(-85deg) scale(1.13);
+  }
+  50% {
+    transform: translateY(-11px) translateX(11px) rotate(-175deg) scale(0.87);
+  }
+  75% {
+    transform: translateY(-21px) translateX(-17px) rotate(-265deg) scale(1.09);
+  }
+}
+
+@keyframes shapeFloatTop5 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-14px) translateX(11px) rotate(88deg) scale(1.11);
+  }
+  50% {
+    transform: translateY(-7px) translateX(-7px) rotate(178deg) scale(0.89);
+  }
+  75% {
+    transform: translateY(-17px) translateX(14px) rotate(268deg) scale(1.07);
+  }
+}
+
+@keyframes shapeFloatTop6 {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-19px) translateX(-15px) rotate(-88deg) scale(1.14);
+  }
+  50% {
+    transform: translateY(-12px) translateX(12px) rotate(-178deg) scale(0.86);
+  }
+  75% {
+    transform: translateY(-22px) translateX(-19px) rotate(-268deg) scale(1.1);
   }
 }
 
@@ -429,6 +715,43 @@
 /* ========== SERVICE CARD ========== */
 .service-card {
   height: 100%;
+  animation: cardFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.service-card[data-index="0"] {
+  animation-delay: 0.1s;
+}
+
+.service-card[data-index="1"] {
+  animation-delay: 0.2s;
+}
+
+.service-card[data-index="2"] {
+  animation-delay: 0.3s;
+}
+
+.service-card[data-index="3"] {
+  animation-delay: 0.4s;
+}
+
+.service-card[data-index="4"] {
+  animation-delay: 0.5s;
+}
+
+.service-card[data-index="5"] {
+  animation-delay: 0.6s;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .service-card-inner {
@@ -437,15 +760,43 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff;
+}
+
+.service-card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(42, 100, 73, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .service-card-inner:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(42, 100, 73, 0.25);
 }
 
-/* Card Image */
+.service-card-inner:hover::before {
+  opacity: 1;
+}
+
+/* Card Image Wrapper */
+.service-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .service-img {
   position: absolute;
   top: 0;
@@ -454,11 +805,27 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(42, 100, 73, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
 }
 
 .service-card-inner:hover .service-img {
-  transform: scale(1.05);
+  transform: scale(1.12) rotate(2deg);
+}
+
+.service-card-inner:hover .service-img-overlay {
+  opacity: 1;
 }
 
 /* Gradient Overlay */
@@ -483,6 +850,43 @@
   height: 75%;
 }
 
+/* Service Icon Wrapper */
+.service-icon-wrapper {
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.service-card-inner:hover .service-icon-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(42, 100, 73, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(42, 100, 73, 0.4);
+  transition: all 0.3s ease;
+}
+
+.service-card-inner:hover .service-icon {
+  background: #2a6449;
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(42, 100, 73, 0.6);
+}
+
+.service-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* Card Content */
 .service-content {
   position: absolute;
@@ -490,6 +894,11 @@
   left: 22px;
   right: 70px;
   z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.service-card-inner:hover .service-content {
+  transform: translateY(-5px);
 }
 
 .service-title {
@@ -498,11 +907,14 @@
   color: #fff;
   margin: 0 0 6px 0;
   line-height: 1.3;
-  transition: color 0.3s ease;
+  transition: all 0.4s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .service-card-inner:hover .service-title {
   color: #2a6449;
+  text-shadow: none;
+  transform: translateX(5px);
 }
 
 .service-text {
@@ -510,6 +922,12 @@
   color: rgba(255, 255, 255, 0.75);
   margin: 0;
   line-height: 1.4;
+  transition: all 0.4s ease;
+}
+
+.service-card-inner:hover .service-text {
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateX(5px);
 }
 
 /* Arrow Button */
@@ -521,28 +939,85 @@
   height: 46px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.35);
-  background: transparent;
+  background: rgba(42, 100, 73, 0.2);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.service-arrow:hover::before {
+  width: 100%;
+  height: 100%;
 }
 
 .service-arrow:hover {
   background: #2a6449;
   border-color: #2a6449;
-  transform: rotate(0deg) scale(1.1);
+  transform: rotate(45deg) scale(1.15);
+  box-shadow: 0 6px 20px rgba(42, 100, 73, 0.5);
 }
 
 .service-arrow svg {
-  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-arrow:hover svg {
-  transform: translate(2px, -2px);
+  transform: translate(3px, -3px) rotate(-45deg);
+}
+
+/* Shine Effect */
+.service-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.service-card-inner:hover .service-shine {
+  opacity: 1;
+  animation: shineSweep 0.8s ease-out;
+}
+
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
 }
 
 /* ========== BOTTOM LINK ========== */
@@ -651,12 +1126,16 @@
     font-size: 15px;
   }
   
-  .running-dog {
-    font-size: 40px;
+  .floating-pet-top img {
+    width: 100px;
   }
   
-  .food-bowl {
-    font-size: 35px;
+  .top-shape img {
+    width: 60px;
+  }
+  
+  .paw-print img {
+    width: 50px;
   }
 }
 
@@ -704,21 +1183,22 @@
     padding: 0 10px;
   }
   
-  .running-dog {
-    font-size: 35px;
-    bottom: 10%;
+  .floating-pet-top img {
+    width: 90px;
   }
   
-  .food-bowl {
-    font-size: 30px;
-    top: 10%;
+  .top-shape img {
+    width: 55px;
   }
   
-  .dog-bone {
-    display: none;
+  .paw-print img {
+    width: 45px;
   }
   
-  .heart-beat {
+  .pet-top-5,
+  .pet-top-6,
+  .shape-top-5,
+  .shape-top-6 {
     display: none;
   }
 }
@@ -770,237 +1250,26 @@
     display: none;
   }
   
-  .running-dog {
-    font-size: 30px;
-  }
-  
-  .food-bowl {
-    font-size: 25px;
-  }
-}
-
-/* ========== ADDITIONAL DOG & CAT ANIMATIONS FROM SHAPE FOLDER ========== */
-.service-dog-cat-animations {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-/* Dog & Cat Shape Animations */
-.service-dog-shape {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.2;
-}
-
-.service-dog-shape img {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(45%) saturate(1200%) hue-rotate(120deg) brightness(0.85) contrast(0.9);
-  opacity: 0.6;
-}
-
-.service-dog-1 {
-  top: 20%;
-  left: 2%;
-  animation: servicePetFloat1 12s ease-in-out infinite;
-}
-
-.service-dog-2 {
-  top: 65%;
-  right: 3%;
-  animation: servicePetFloat2 14s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-.service-dog-3 {
-  bottom: 25%;
-  left: 5%;
-  animation: servicePetFloat3 13s ease-in-out infinite;
-  animation-delay: 4s;
-}
-
-.service-dog-4 {
-  top: 40%;
-  right: 8%;
-  animation: servicePetFloat4 15s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-/* Floating Shape Animations */
-.service-floating-shape {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.15;
-}
-
-.service-floating-shape img {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(45%) saturate(1200%) hue-rotate(120deg) brightness(0.85) contrast(0.9);
-  opacity: 0.5;
-}
-
-.service-float-1 {
-  top: 15%;
-  right: 10%;
-  animation: serviceShapeFloat1 18s ease-in-out infinite;
-}
-
-.service-float-2 {
-  bottom: 20%;
-  left: 8%;
-  animation: serviceShapeFloat2 20s ease-in-out infinite;
-  animation-delay: 3s;
-}
-
-.service-float-3 {
-  top: 55%;
-  right: 15%;
-  animation: serviceShapeFloat3 16s ease-in-out infinite;
-  animation-delay: 5s;
-}
-
-/* Pet Float Animations */
-@keyframes servicePetFloat1 {
-  0%, 100% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-20px) translateX(15px) rotate(5deg);
-  }
-  50% {
-    transform: translateY(-10px) translateX(-10px) rotate(-5deg);
-  }
-  75% {
-    transform: translateY(-25px) translateX(20px) rotate(3deg);
-  }
-}
-
-@keyframes servicePetFloat2 {
-  0%, 100% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-25px) translateX(-15px) rotate(-5deg);
-  }
-  50% {
-    transform: translateY(-15px) translateX(10px) rotate(5deg);
-  }
-  75% {
-    transform: translateY(-30px) translateX(-20px) rotate(-3deg);
-  }
-}
-
-@keyframes servicePetFloat3 {
-  0%, 100% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-18px) translateX(12px) rotate(4deg);
-  }
-  50% {
-    transform: translateY(-12px) translateX(-8px) rotate(-4deg);
-  }
-  75% {
-    transform: translateY(-22px) translateX(18px) rotate(2deg);
-  }
-}
-
-@keyframes servicePetFloat4 {
-  0%, 100% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-22px) translateX(-12px) rotate(-4deg);
-  }
-  50% {
-    transform: translateY(-14px) translateX(14px) rotate(4deg);
-  }
-  75% {
-    transform: translateY(-28px) translateX(-18px) rotate(-2deg);
-  }
-}
-
-/* Shape Float Animations */
-@keyframes serviceShapeFloat1 {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  25% {
-    transform: translate(25px, -25px) rotate(90deg) scale(1.1);
-  }
-  50% {
-    transform: translate(-15px, 15px) rotate(180deg) scale(0.9);
-  }
-  75% {
-    transform: translate(30px, 8px) rotate(270deg) scale(1.05);
-  }
-}
-
-@keyframes serviceShapeFloat2 {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  25% {
-    transform: translate(-20px, -30px) rotate(-90deg) scale(1.15);
-  }
-  50% {
-    transform: translate(18px, 20px) rotate(-180deg) scale(0.85);
-  }
-  75% {
-    transform: translate(-25px, 12px) rotate(-270deg) scale(1.08);
-  }
-}
-
-@keyframes serviceShapeFloat3 {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  25% {
-    transform: translate(22px, -22px) rotate(85deg) scale(1.12);
-  }
-  50% {
-    transform: translate(-18px, 18px) rotate(175deg) scale(0.88);
-  }
-  75% {
-    transform: translate(28px, 10px) rotate(265deg) scale(1.06);
-  }
-}
-
-/* Responsive adjustments for additional animations */
-@media (max-width: 991px) {
-  .service-dog-shape img {
+  .floating-pet-top img {
     width: 80px;
   }
   
-  .service-floating-shape img {
+  .top-shape img {
     width: 50px;
   }
-}
-
-@media (max-width: 767px) {
-  .service-dog-shape img {
-    width: 70px;
+  
+  .paw-print img {
+    width: 40px;
   }
   
-  .service-floating-shape img {
-    width: 45px;
-  }
-  
-  .service-dog-3,
-  .service-dog-4,
-  .service-float-2,
-  .service-float-3 {
+  .pet-top-3,
+  .pet-top-4,
+  .pet-top-5,
+  .pet-top-6,
+  .shape-top-3,
+  .shape-top-4,
+  .shape-top-5,
+  .shape-top-6 {
     display: none;
   }
 }

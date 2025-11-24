@@ -1,8 +1,91 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Contact = () => {
+  const dateInputRef = useRef(null);
+
+  useEffect(() => {
+    // Set current date when component mounts
+    if (dateInputRef.current) {
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      const currentDate = `${year}-${month}-${day}`;
+      dateInputRef.current.value = currentDate;
+    }
+  }, []);
+
   return (
     <div className="space overflow-hidden contact-area-0 position-relative z-index-common" id="contact-sec">
+      {/* Top Animated Paw Prints Background */}
+      <div className="contact-paw-prints-bg">
+        <div className="contact-paw-print contact-paw-1">
+          <img src="/assets/img/shape/shape1-33.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-2">
+          <img src="/assets/img/shape/shape1-34.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-3">
+          <img src="/assets/img/shape/shape1-35.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-4">
+          <img src="/assets/img/shape/shape1-36.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-5">
+          <img src="/assets/img/shape/shape1-37.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-6">
+          <img src="/assets/img/shape/shape1-39.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-7">
+          <img src="/assets/img/shape/shape1-40.png" alt="paw" />
+        </div>
+        <div className="contact-paw-print contact-paw-8">
+          <img src="/assets/img/shape/shape1-41.png" alt="paw" />
+        </div>
+      </div>
+
+      {/* Top Floating Pet Shapes - Dog & Cat */}
+      <div className="contact-floating-pet-shapes-top">
+        <div className="contact-floating-pet-top contact-pet-top-1">
+          <img src="/assets/img/shape/cat3-pagi-left.png" alt="pet" />
+        </div>
+        <div className="contact-floating-pet-top contact-pet-top-2">
+          <img src="/assets/img/shape/cat3-pagi-right.png" alt="pet" />
+        </div>
+        <div className="contact-floating-pet-top contact-pet-top-3">
+          <img src="/assets/img/shape/testi3-pagi-left.png" alt="pet" />
+        </div>
+        <div className="contact-floating-pet-top contact-pet-top-4">
+          <img src="/assets/img/shape/testi3-pagi-right.png" alt="pet" />
+        </div>
+        <div className="contact-floating-pet-top contact-pet-top-5">
+          <img src="/assets/img/shape/dogcat.jpg" alt="dog" />
+        </div>
+      </div>
+
+      {/* Top Additional Shape Animations */}
+      <div className="contact-top-shape-animations">
+        <div className="contact-top-shape contact-shape-top-1">
+          <img src="/assets/img/shape/shape1-7.png" alt="shape" />
+        </div>
+        <div className="contact-top-shape contact-shape-top-2">
+          <img src="/assets/img/shape/shape1-8.png" alt="shape" />
+        </div>
+        <div className="contact-top-shape contact-shape-top-3">
+          <img src="/assets/img/shape/shape1-9.png" alt="shape" />
+        </div>
+        <div className="contact-top-shape contact-shape-top-4">
+          <img src="/assets/img/shape/shape1-10.png" alt="shape" />
+        </div>
+        <div className="contact-top-shape contact-shape-top-5">
+          <img src="/assets/img/shape/shape1-11.png" alt="shape" />
+        </div>
+        <div className="contact-top-shape contact-shape-top-6">
+          <img src="/assets/img/shape/shape1-12.png" alt="shape" />
+        </div>
+      </div>
+
       <div className="shape-mockup jump-reverse d-xxl-block d-none" data-bottom="0%" data-right="0%">
         <img src="/assets/img/shape/shape1-89.png" alt="img" />
       </div>
@@ -14,7 +97,7 @@ const Contact = () => {
                 <img className="me-2" src="/assets/img/icon/subtitle-icon4.svg" alt="icon" /> book an Appointment
               </span>
               <h2 className="sec-title text-anim2" data-cue="slideInUp">Book an Appointment</h2>
-              <p className="fs-18 text-anim2" data-cue="slideInUp">Need some advice or have any questions about our services? Contact us in any convenient way.</p>
+              <p className="fs-18 text-anim2" data-cue="slideInUp">Have doubts or need guidance? Our team is always ready to help—just contact us!</p>
             </div>
           </div>
         </div>
@@ -70,7 +153,14 @@ const Contact = () => {
                     <i className="fal fa-chevron-down"></i>
                   </div>
                   <div className="form-group style-border col-md-12">
-                    <input type="date" className="form-control" defaultValue="2025-11-16" name="date" id="date" required />
+                    <input 
+                      type="date" 
+                      className="form-control" 
+                      name="date" 
+                      id="date" 
+                      ref={dateInputRef}
+                      required 
+                    />
                   </div>
                   <div className="form-btn col-12">
                     <button type="submit" className="th-btn">Submit Now</button>

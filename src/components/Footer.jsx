@@ -4,7 +4,48 @@ const Footer = () => {
   return (
     <footer className="footer-wrapper footer-layout2 style-2" id="contact-sec">
 
-      {/* Shapes */}
+      {/* Footer Dog & Cat Animations - Like Why Choose Us */}
+      <div className="footer-dog-animations">
+        <div className="footer-why-dog-shape footer-why-dog-left-1">
+          <img src="/assets/img/shape/testi3-pagi-left.png" alt="dog" />
+        </div>
+        <div className="footer-why-dog-shape footer-why-dog-left-2">
+          <img src="/assets/img/shape/testi3-pagi-right.png" alt="dog" />
+        </div>
+        {/* Combined Cat & Dog Image - Original View (No Filter) */}
+        <div className="footer-why-dog-shape footer-why-dogcat-left">
+          <img src="/assets/img/shape/dogcat.jpg" alt="dog and cat" />
+        </div>
+        <div className="footer-why-float-shape footer-why-shape-left-1">
+          <img src="/assets/img/shape/shape1-33.png" alt="shape" />
+        </div>
+        <div className="footer-why-float-shape footer-why-shape-left-2">
+          <img src="/assets/img/shape/shape1-34.png" alt="shape" />
+        </div>
+      </div>
+
+      {/* Footer Cat Animations - Right Side */}
+      <div className="footer-cat-animations">
+        <div className="footer-why-cat-shape footer-why-cat-right-1">
+          <img src="/assets/img/shape/shape1-93.png" alt="cat" />
+        </div>
+        <div className="footer-why-cat-shape footer-why-cat-right-2">
+          <img src="/assets/img/shape/cat3-pagi-left.png" alt="cat" />
+        </div>
+        <div className="footer-why-float-shape footer-why-shape-right-1">
+          <img src="/assets/img/shape/shape1-35.png" alt="shape" />
+        </div>
+        <div className="footer-why-float-shape footer-why-shape-right-2">
+          <img src="/assets/img/shape/shape1-36.png" alt="shape" />
+        </div>
+        <div className="footer-why-float-shape footer-why-shape-right-3">
+          <img src="/assets/img/shape/shape1-93.png" alt="shape" />
+        </div>
+      </div>
+      
+      
+
+      {/* Footer Background Shapes */}
       <div className="shape-mockup footer-bg-shape2 d-none d-xxl-block" data-bottom="0%" data-left="2%">
         <img src="/assets/img/shape/shape1-55.png" alt="img" />
       </div>
@@ -14,7 +55,7 @@ const Footer = () => {
 
       <div className="widget-area">
         <div className="container th-container">
-          <div className="row justify-content-between">
+          <div className="row justify-content-between align-items-start footer-main-row">
 
             {/* Logo & Contact Info */}
             <div className="col-sm-6 col-xl-auto" data-cue="slideInUp">
@@ -26,17 +67,16 @@ const Footer = () => {
                     </a>
                   </div>
                   <p className="about-text">
-                    Reliable pet care services keeping pets happy, healthy & safe at home.
-                  </p>
+                    Loving, reliable pet care to keep your pets joyful, healthy, and safe in their own space.</p>
 
                   <div className="info-box">
                     <div className="box-icon"><i className="fas fa-phone"></i></div>
-                    <p className="box-text"><a href="tel:+91 98765 43210" className="box-link">+91 98765 43210</a></p>
+                    <p className="box-text"><a href="tel:+91 98765 43210" className="box-link">+91 9994610836</a></p>
                   </div>
 
                   <div className="info-box">
                     <div className="box-icon"><i className="fas fa-envelope"></i></div>
-                    <p className="box-text"><a href="mailto:info@petcare.com" className="box-link">info@petcare.com</a></p>
+                    <p className="box-text"><a href="#" className="box-link">walkmypet@gmail.com</a></p>
                   </div>
 
                   <div className="info-box">
@@ -54,9 +94,9 @@ const Footer = () => {
                 <div className="menu-all-pages-container">
                   <ul className="menu">
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#about-sec">About Us</a></li>
-                    <li><a href="#service-sec">Services</a></li>
-                    <li><a href="#contact-sec">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
                   </ul>
                 </div>
               </div>
@@ -79,10 +119,10 @@ const Footer = () => {
 
           </div>
 
-          {/* Newsletter Subscribe */}
-          <div className="row justify-content-center">
-            <div className="col-xxl-6 col-xl-7 col-lg-8">
-              <div className="footer2-subscribe-wrap text-center me-xl-5 ms-xl-5">
+          {/* Newsletter Subscribe - Centered */}
+          <div className="row justify-content-center footer-subscribe-row">
+            <div className="col-xxl-8 col-xl-9 col-lg-10">
+              <div className="footer2-subscribe-wrap text-center">
                 <h4 className="box-title">Subscribe for pet care updates!</h4>
                 <form className="newsletter-form">
                   <div className="form-group">

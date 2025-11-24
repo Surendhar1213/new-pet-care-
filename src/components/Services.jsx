@@ -61,27 +61,83 @@ const Services = () => {
 
   return (
     <section className="service-section" id="service-sec">
-      {/* Animated Paw Prints Background */}
+      {/* Top Animated Paw Prints Background */}
       <div className="paw-prints-bg">
-        <div className="paw-print paw-1">🐾</div>
-        <div className="paw-print paw-2">🐾</div>
-        <div className="paw-print paw-3">🐾</div>
-        <div className="paw-print paw-4">🐾</div>
-        <div className="paw-print paw-5">🐾</div>
-        <div className="paw-print paw-6">🐾</div>
+        <div className="paw-print paw-1">
+          <img src="/assets/img/shape/shape1-23.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-2">
+          <img src="/assets/img/shape/shape1-24.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-3">
+          <img src="/assets/img/shape/shape1-25.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-4">
+          <img src="/assets/img/shape/shape1-26.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-5">
+          <img src="/assets/img/shape/shape1-27.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-6">
+          <img src="/assets/img/shape/shape1-28.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-7">
+          <img src="/assets/img/shape/shape1-29.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-8">
+          <img src="/assets/img/shape/shape1-30.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-9">
+          <img src="/assets/img/shape/shape1-31.png" alt="paw" />
+        </div>
+        <div className="paw-print paw-10">
+          <img src="/assets/img/shape/shape1-32.png" alt="paw" />
+        </div>
       </div>
 
-      {/* Running Dog Animation 🐕💨 */}
-      <div className="running-dog">🐕</div>
+      {/* Top Floating Pet Shapes - Dog & Cat */}
+      <div className="floating-pet-shapes-top">
+        <div className="floating-pet-top pet-top-1">
+          <img src="/assets/img/shape/cat3-pagi-left.png" alt="pet" />
+        </div>
+        <div className="floating-pet-top pet-top-2">
+          <img src="/assets/img/shape/cat3-pagi-right.png" alt="pet" />
+        </div>
+        <div className="floating-pet-top pet-top-3">
+          <img src="/assets/img/shape/testi3-pagi-left.png" alt="pet" />
+        </div>
+        <div className="floating-pet-top pet-top-4">
+          <img src="/assets/img/shape/testi3-pagi-right.png" alt="pet" />
+        </div>
+        <div className="floating-pet-top pet-top-5">
+          <img src="/assets/img/shape/dogcat.jpg" alt="dog" />
+        </div>
+        <div className="floating-pet-top pet-top-6">
+          <img src="/assets/img/shape/service-5-top.png" alt="shape" />
+        </div>
+      </div>
 
-      {/* Food Bowl Animation 🍖 */}
-      <div className="food-bowl">🍖</div>
-
-      {/* Dog Bone Animation 🦴 */}
-      <div className="dog-bone">🦴</div>
-
-      {/* Heart Beat Animation ❤️ */}
-      <div className="heart-beat">❤️</div>
+      {/* Top Additional Shape Animations */}
+      <div className="top-shape-animations">
+        <div className="top-shape shape-top-1">
+          <img src="/assets/img/shape/shape1-1.png" alt="shape" />
+        </div>
+        <div className="top-shape shape-top-2">
+          <img src="/assets/img/shape/shape1-2.png" alt="shape" />
+        </div>
+        <div className="top-shape shape-top-3">
+          <img src="/assets/img/shape/shape1-3.png" alt="shape" />
+        </div>
+        <div className="top-shape shape-top-4">
+          <img src="/assets/img/shape/shape1-4.png" alt="shape" />
+        </div>
+        <div className="top-shape shape-top-5">
+          <img src="/assets/img/shape/shape1-5.png" alt="shape" />
+        </div>
+        <div className="top-shape shape-top-6">
+          <img src="/assets/img/shape/shape1-6.png" alt="shape" />
+        </div>
+      </div>
 
       {/* Left Side Decorative Circle */}
       <div className="service-shape-left">
@@ -98,30 +154,6 @@ const Services = () => {
         <img src="/assets/img/shape/service-5-top.png" alt="" />
       </div>
 
-      {/* Additional Dog & Cat Animations from Shape Folder */}
-      <div className="service-dog-cat-animations">
-        <div className="service-dog-shape service-dog-1">
-          <img src="/assets/img/shape/cat3-pagi-left.png" alt="dog" />
-        </div>
-        <div className="service-dog-shape service-dog-2">
-          <img src="/assets/img/shape/cat3-pagi-right.png" alt="cat" />
-        </div>
-        <div className="service-dog-shape service-dog-3">
-          <img src="/assets/img/shape/testi3-pagi-left.png" alt="pet" />
-        </div>
-        <div className="service-dog-shape service-dog-4">
-          <img src="/assets/img/shape/testi3-pagi-right.png" alt="pet" />
-        </div>
-        <div className="service-floating-shape service-float-1">
-          <img src="/assets/img/shape/shape1-23.png" alt="shape" />
-        </div>
-        <div className="service-floating-shape service-float-2">
-          <img src="/assets/img/shape/shape1-24.png" alt="shape" />
-        </div>
-        <div className="service-floating-shape service-float-3">
-          <img src="/assets/img/shape/shape1-25.png" alt="shape" />
-        </div>
-      </div>
 
       <div className="container">
         {/* Section Header */}
@@ -203,16 +235,26 @@ const Services = () => {
           >
             {services.map((service, idx) => (
               <SwiperSlide key={`service-${idx}`}>
-                <div className="service-card">
+                <div className="service-card" data-index={idx}>
                   <div className="service-card-inner">
-                    <img 
-                      src={service.img} 
-                      alt={service.title}
-                      className="service-img"
-                      loading="eager"
-                    />
+                    <div className="service-img-wrapper">
+                      <img 
+                        src={service.img} 
+                        alt={service.title}
+                        className="service-img"
+                        loading="eager"
+                      />
+                      <div className="service-img-overlay"></div>
+                    </div>
                     <div className="service-overlay"></div>
                     <div className="service-content">
+                      <div className="service-icon-wrapper">
+                        <div className="service-icon">
+                          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                          </svg>
+                        </div>
+                      </div>
                       <h3 className="service-title">{service.title}</h3>
                       <p className="service-text">{service.text}</p>
                     </div>
@@ -221,6 +263,7 @@ const Services = () => {
                         <path d="M7 17L17 7M17 7H7M17 7v10"/>
                       </svg>
                     </a>
+                    <div className="service-shine"></div>
                   </div>
                 </div>
               </SwiperSlide>
@@ -230,7 +273,7 @@ const Services = () => {
 
         {/* Bottom Link */}
         <div className="service-bottom">
-          <a href="#service-sec" className="service-link">
+          <a href="#" className="service-link">
             View All Pet Care Services
             <svg className="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>

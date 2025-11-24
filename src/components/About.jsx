@@ -140,7 +140,7 @@ const About = () => {
 
                   {/* Button */}
                   <div className="btn-wrap mt-25" data-cue="slideInUp">
-                    <a className="th-btn th-btn-icon2" href="#about-sec">
+                    <a className="th-btn th-btn-icon2" href="#">
                       More About Us <i className="far fa-long-arrow-right ms-3"></i>
                     </a>
                   </div>

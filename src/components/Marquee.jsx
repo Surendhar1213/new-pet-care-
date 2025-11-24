@@ -30,11 +30,6 @@ const PetServicesMarquee = () => {
       color: '#2a6449'
     },
     { 
-      name: 'Pet Spa',
-      icon: '💆',
-      color: '#2a6449'
-    },
-    { 
       name: 'Veterinary Care',
       icon: '🩺',
       color: '#2a6449'

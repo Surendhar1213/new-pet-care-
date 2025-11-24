@@ -10,19 +10,19 @@ const Hero = () => {
   const [isReady, setIsReady] = useState(false);
 
   const heroSlides = [
-  {
-    bg: '/assets/img/hero/hero-7-1-bg.jpg',
-    title: 'Reliable Dog Walking & Daily Exercise'
-  },
-  {
-    bg: '/assets/img/hero/hero-7-2-bg.jpg',
-    title: 'Safe House Sitting With Full-Time Care'
-  },
-  {
-    bg: '/assets/img/hero/hero-7-3-bg.jpg',
-    title: 'Drop-In Visits & Fun Doggy Day Care'
-  },
-];
+    {
+      bg: '/assets/img/hero2.jpg',
+      title: 'Reliable Dog Walking & Daily Exercise'
+    },
+    {
+      bg: '/assets/img/hero4.jpg',
+      title: 'Safe House Sitting With Full-Time Care'
+    },
+    {
+      bg: '/assets/img/hero3.jpg',
+      title: 'Drop-In Visits & Fun Doggy Day Care'
+    },
+  ];
 
   // Initialize slider properly
   useEffect(() => {
@@ -31,7 +31,6 @@ const Hero = () => {
     // Handle browser back/forward navigation
     const handlePageShow = (e) => {
       if (e.persisted) {
-        // Reinitialize autoplay after back button
         setTimeout(() => {
           if (swiperRef.current?.swiper) {
             swiperRef.current.swiper.autoplay.start();
@@ -77,19 +76,17 @@ const Hero = () => {
         slidesPerView={1}
         className="hero-slider"
         watchSlidesProgress={true}
+        onSlideChange={(swiper) => {
+          if (swiper.autoplay) {
+            swiper.autoplay.start();
+          }
+        }}
         onSwiper={(swiper) => {
-          // Ensure autoplay starts
           setTimeout(() => {
             if (swiper && swiper.autoplay) {
               swiper.autoplay.start();
             }
           }, 100);
-        }}
-        onSlideChange={() => {
-          // Keep autoplay running
-          if (swiperRef.current?.swiper?.autoplay) {
-            swiperRef.current.swiper.autoplay.start();
-          }
         }}
       >
         {heroSlides.map((slide, index) => (
@@ -108,13 +105,12 @@ const Hero = () => {
               <div className="hero-overlay"></div>
               <div className="hero-inner">
                 <div className="container th-container2">
-                  <div className="row gy-4 gx-40 align-items-center justify-content-center">
-                    <div className="col-xxl-8 col-xl-9 col-lg-10">
+                  <div className="row gy-4 gx-40 align-items-end justify-content-center hero-content-row">
+                    <div className="col-xxl-10 col-xl-10 col-lg-11">
                       <div className="hero-style7">
                         <h1 className="hero-title">{slide.title}</h1>
-                        <p className="hero-text">{slide.text}</p>
-                        <div>
-                          <a href="#contact-sec" className="th-btn th-btn-icon2">
+                        <div className="hero-button-wrapper">
+                          <a href="#" className="th-btn th-btn-icon2">
                             Book a Stay <i className="far fa-long-arrow-right ms-3"></i>
                           </a>
                         </div>

@@ -94,7 +94,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="btn-wrap justify-content-center">
-                <a className="th-btn" href="#contact-sec">Schedule a Visit</a>
+                <a className="th-btn" href="#">Schedule a Visit</a>
               </div>
 
               <div className="why-img-box1" data-cue="slideInUp">
